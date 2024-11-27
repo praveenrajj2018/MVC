@@ -1,0 +1,145 @@
+@model IEnumerable<LoginApp.Models.Ingredient>
+
+@{
+    ViewData["Title"] = "Ingredients";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ775eaSPhE8qDJE1TMfGAd47XFrn5eos1M" crossorigin="anonymous">
+    <title>@ViewData["Title"] - LoginApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/ingredients.css" asp-append-version="true" />
+
+    <!-- Kendo UI stylesheets -->
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2024.1.119/styles/kendo.default-v2.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2024.1.119/styles/kendo.common.min.css" />
+</head>
+<body>
+    <div class="container contentss" style="margin-right:370px">
+        <h3 style="padding-top:150px">Add Ingredients</h3>
+        <form asp-controller="Ingredients" asp-action="AddIngredient" method="post" class="centered-form" style="margin-right:120px">
+            <div class="form-group">
+                <label for="name">Ingredient # or Description</label>
+                <input type="text" class="form-control" id="name" name="Name" style="padding-right:280px;color:white;" >
+            </div>
+            <div class="form-group">
+                <label for="source">Source</label>
+                <select class="form-control custom-select" id="source" name="Source" required>
+                    <option value="">Select Source</option>
+                    <option value="Local">Local</option>
+                    <option value="USDA">USDA</option>
+                    <option value="GSImport">GSImport</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="classification">Classification</label>
+                <select class="form-control custom-select" id="classification" name="Classification" >
+                    <option value="">Select Classification</option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Dairy Food">Dairy Food</option>
+                    <option value="Fast Food">Fast Food</option>
+                    <option value="Dessert Food">Dessert Food</option>
+                    <option value="Fat">Fat</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" style="background-color:green">Add</button>
+            <button type="submit" formaction="@Url.Action("SearchIngredients", "Ingredients")" class="btn btn-secondary" style="background-color:blue">Search</button>
+        </form>
+
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @ViewBag.ErrorMessage
+            </div>
+        }
+
+        <hr />
+        <div class="table-wrapper">
+            <div class="action-buttons" style="display:none;">
+                <button id="delete-button" class="btn btn-danger">Delete</button>
+                <button id="cancel-button" class="btn btn-secondary">Cancel</button>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="width:5%"><input type="checkbox" id="select-all"></th>
+                        <th data-sortable="true">Ingredient Name<div class="resizer"></div></th>
+                        <th>Source<div class="resizer"></div></th>
+                        <th>Classification<div class="resizer"></div></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ingredient in Model)
+                    {
+                        <tr class="clickable-row" data-id="@ingredient.Id" data-href="@Url.Action("UpdateIngredient", new { id = ingredient.Id })">
+                            <td ><input type="checkbox" class="row-checkbox" value="@ingredient.Id"></td>
+                            <td>@ingredient.Name</td>
+                            <td>@ingredient.Source</td>
+                            <td>@ingredient.Classification</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://kendo.cdn.telerik.com/2024.1.119/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.1.119/js/kendo.all.min.js"></script>
+    <script src="~/js/ingredients.js" asp-append-version="true"></script>
+    <script>
+        $(document).ready(function () {
+            // Initialize Kendo DropDownList for Source
+            $("#source").kendoDropDownList({
+                dataTextField: "Text",
+                dataValueField: "Value",
+                dataSource: [
+                    { Value: "Local", Text: "Local" },
+                    { Value: "USDA", Text: "USDA" },
+                    { Value: "GSImport", Text: "GSImport" }
+                ]
+            });
+
+            // Initialize Kendo DropDownList for Classification
+            $("#classification").kendoDropDownList({
+                dataTextField: "Text",
+                dataValueField: "Value",
+                dataSource: [
+                    { Value: "Chicken", Text: "Chicken" },
+                    { Value: "Dairy Food", Text: "Dairy Food" },
+                    { Value: "Fast Food", Text: "Fast Food" },
+                    { Value: "Dessert Food", Text: "Dessert Food" },
+                    { Value: "Fat", Text: "Fat" }
+                ]
+            });
+
+            // Select-all functionality for checkboxes
+            $("#select-all").click(function () {
+                $(".row-checkbox").prop('checked', $(this).prop('checked'));
+                toggleActionButtons();
+            });
+
+            // Toggle action buttons based on row selections
+            $(".row-checkbox").change(function () {
+                toggleActionButtons();
+            });
+
+            function toggleActionButtons() {
+                if ($(".row-checkbox:checked").length > 0) {
+                    $(".action-buttons").show();
+                } else {
+                    $(".action-buttons").hide();
+                }
+            }
+
+            // Row click functionality to navigate to update page
+            $(".clickable-row").click(function () {
+                window.location = $(this).data("href");
+            });
+        });
+    </script>
+</body>
+</html>

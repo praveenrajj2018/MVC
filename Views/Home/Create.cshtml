@@ -1,0 +1,80 @@
+@model LoginApp.Models.Nutrient
+
+@{
+    ViewData["Title"] = "Create Nutrient";
+}
+
+<h4 style="padding-top:120px">**************************** Nutrient Value **********************************</h4>
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;margin-right:320px">
+    <form asp-controller="Create" asp-action="Create" method="post" style="width: 50%; display: flex; flex-direction: column; align-items: center;margin-bottom:210px">
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @ViewBag.ErrorMessage
+            </div>
+        }
+
+        <div class="form-group" style="width: 100%;">
+            <label asp-for="BaseWeight" class="control-label"></label>
+            <input asp-for="BaseWeight" class="form-control" style="width: 100%;" placeholder="*N/A*" />
+            <span asp-validation-for="BaseWeight" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="width: 100%;">
+            <label asp-for="Calories" class="control-label"></label>
+            <input asp-for="Calories" class="form-control" style="width: 100%;" />
+            <span asp-validation-for="Calories" class="text-danger"></span>
+        </div>
+
+        <div class="form-group" style="width: 100%;">
+            <label asp-for="TotalFat" class="control-label"></label>
+            <div style="display: flex; align-items: center;">
+                <input asp-for="TotalFat" class="form-control" style="width: 100%;" />
+                <p class="inline-text" style="margin-left: 10px;">g</p>
+            </div>
+            <span asp-validation-for="TotalFat" class="text-danger"></span>
+        </div>
+
+        <div class="form-group" style="width: 100%;">
+            <label asp-for="SaturatedFat" class="control-label"></label>
+            <div style="display: flex; align-items: center;">
+                <input asp-for="SaturatedFat" class="form-control" style="width: 100%;" />
+                <p class="inline-text" style="margin-left: 10px;">g</p>
+            </div>
+            <span asp-validation-for="SaturatedFat" class="text-danger"></span>
+        </div>
+
+        <div class="form-group" style="width: 100%;">
+            <label asp-for="Cholesterol" class="control-label"></label>
+            <div style="display: flex; align-items: center;">
+                <input asp-for="Cholesterol" class="form-control" style="width: 100%;" />
+                <p class="inline-text" style="margin-left: 10px;">g</p>
+            </div>
+            <span asp-validation-for="Cholesterol" class="text-danger"></span>
+        </div>
+
+        <div class="form-group" style="width: 100%;">
+            <label asp-for="Sodium" class="control-label"></label>
+            <div style="display: flex; align-items: center;">
+                <input asp-for="Sodium" class="form-control" style="width: 100%;" />
+                <p class="inline-text" style="margin-left: 10px;">g</p>
+            </div>
+            <span asp-validation-for="Sodium" class="text-danger"></span>
+        </div>
+
+        <div class="form-group" style="width: 100%;">
+            <label asp-for="Carbohydrate" class="control-label"></label>
+            <div style="display: flex; align-items: center;">
+                <input asp-for="Carbohydrate" class="form-control" style="width: 100%;" />
+                <p class="inline-text" style="margin-left: 10px;">g</p>
+            </div>
+            <span asp-validation-for="Carbohydrate" class="text-danger"></span>
+        </div>
+
+        <br/>
+        <div class="form-group" style="width: 100%;">
+            <input type="submit" value="Add" class="btn btn-primary" style="background-color:green" />
+            <a href="javascript:history.back()" class="btn btn-secondary" style="background-color:red">Cancel</a>
+        </div>
+    </form><br/>
+    <img src="https://cdn-gxx.dataweavers.io/-/media/heartland/school-solutions/meal-orders-laptop.jpg" width="720px" height="320px" style="margin-bottom:180px;padding-left:290px">
+</div>

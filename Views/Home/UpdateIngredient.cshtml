@@ -1,0 +1,129 @@
+@model LoginApp.Models.Ingredient
+
+@{
+    ViewData["Title"] = "Update Ingredient";
+    var sources = new List<SelectListItem>
+    {
+        new SelectListItem { Value = "Local", Text = "Local" },
+        new SelectListItem { Value = "USDA", Text = "USDA" },
+        new SelectListItem { Value = "GSImport", Text = "GSImport" }
+    };
+
+    var classifications = new List<SelectListItem>
+    {
+        new SelectListItem { Value = "Chicken", Text = "Chicken" },
+        new SelectListItem { Value = "Dairy Food", Text = "Dairy Food" },
+        new SelectListItem { Value = "Fast Food", Text = "Fast Food" },
+        new SelectListItem { Value = "Dessert Food", Text = "Dessert Food" },
+        new SelectListItem { Value = "Fat", Text = "Fat" }
+    };
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ775eaSPhE8qDJE1TMfGAd47XFrn5eos1M" crossorigin="anonymous">
+    <title>@ViewData["Title"] - LoginApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/updateingredient.css" asp-append-version="true" />
+
+    <!-- Kendo UI stylesheets -->
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2024.1.119/styles/kendo.default-v2.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2024.1.119/styles/kendo.common.min.css" />
+    <!-- Kendo UI scripts -->
+    <script src="https://kendo.cdn.telerik.com/2024.1.119/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.1.119/js/kendo.all.min.js"></script>
+</head>
+<body>
+    <div class="containers mt-6" style='margin-right:300px;width:720px' >
+        <div class="btn-groupss" style="margin-bottom: 40px;margin-right:110px;margin-top:120px">
+            <h2>General</h2>
+            <a href="@Url.Action("Measurement", "Measurements")" class="btn btn-info">Measurement</a>
+            <a href="@Url.Action("Create", "Create")" class="btn btn-warning">Nutrients</a>
+            <a href="" class="btn btn-success">Allegens</a>
+            <a href="" class="btn btn-primary">Purchase info</a>
+            <a href="" class="btn btn-secondary">Attachments</a>
+        </div>
+        <form asp-controller="Ingredients" asp-action="UpdateIngredient" method="post" class="centered-form" style="padding-left:20px">
+            <div class="form-group">
+                <label for="name">Ingredient # or Description</label>
+                <input type="text" class="form-control" id="name" name="Name" value="@Model.Name" required>
+            </div>
+            <div class="form-group">
+                <label for="source">Source</label>
+                @Html.DropDownListFor(model => model.Source, new SelectList(sources, "Value", "Text", Model.Source), new { @class = "form-control dropdown-arrow", id = "source" })
+            </div>
+            <div class="form-group">
+                <label for="classification">Classification</label>
+                @Html.DropDownListFor(model => model.Classification, new SelectList(classifications, "Value", "Text", Model.Classification), new { @class = "form-control dropdown-arrow", id = "classification" })
+            </div><br/>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+
+    <div id="grid"></div>
+
+    <img src="https://cdn-gxx.dataweavers.io/-/media/heartland/school-solutions/hss-footer.png?modified=20190820232021" width="1130px" style="margin-top:100px">
+
+    <!-- Kendo UI scripts -->
+    <script src="https://kendo.cdn.telerik.com/2024.1.119/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.1.119/js/kendo.all.min.js"></script>
+    <script src="~/js/updateingredient.js" asp-append-version="true"></script>
+    <script>
+        $(document).ready(function () {
+            // Initialize Kendo Grid
+            $("#grid").kendoGrid({
+                dataSource: {
+                    transport: {
+                        read: {
+                            url: "@Url.Action("GetIngredients", "Ingredients")",
+                            dataType: "json"
+                        }
+                    },
+                    schema: {
+                        model: {
+                            fields: {
+                                name: { type: "string" },
+                                source: { type: "string" },
+                                classification: { type: "string" }
+                            }
+                        }
+                    },
+                    pageSize: 20
+                },
+                height: 550,
+                sortable: true,
+                pageable: {
+                    refresh: true,
+                    pageSizes: true,
+                    buttonCount: 5
+                },
+                columns: [
+                    { field: "name", title: "Name" },
+                    { field: "source", title: "Source" },
+                    { field: "classification", title: "Classification" }
+                ]
+            });
+
+            // Initialize Kendo DropDownList for Source
+            $("#source").kendoDropDownList({
+                dataTextField: "Text",
+                dataValueField: "Value",
+                dataSource: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(sources)),
+                value: "@Model.Source"
+            });
+
+            // Initialize Kendo DropDownList for Classification
+            $("#classification").kendoDropDownList({
+                dataTextField: "Text",
+                dataValueField: "Value",
+                dataSource: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(classifications)),
+                value: "@Model.Classification"
+            });
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ775eaSPhE8qDJE1TMfGAd47XFrn5eos1M" crossorigin="anonymous">
+    <title>@ViewData["Title"] - LoginApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+</head>
+<body style="margin-right:280px">
+    <div class="container-fluid" style="margin-top:140px">
+        <div id="customCarousel">
+            <h4>Welcome TestUser</h4>
+            <div class="carousel-item active" style="background-color: violet;margin-right:120px">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    Back of House 3.19 is here
+                </div>
+                <div class="carousel-control-prev" onclick="prevSlide()">&#10094;</div>
+                <div class="carousel-control-next" onclick="nextSlide()">&#10095;</div>
+            </div>
+            <div class="carousel-item" style="background-color: lightgreen;">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    Connect join us on March 19-20 in Phoenix
+                </div>
+                <div class="carousel-control-prev" onclick="prevSlide()">&#10094;</div>
+                <div class="carousel-control-next" onclick="nextSlide()">&#10095;</div>
+            </div>
+            <div class="carousel-item" style="background-color: blue;">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    See our all-new meals order solution
+                </div>
+                <div class="carousel-control-prev" onclick="prevSlide()">&#10094;</div>
+                <div class="carousel-control-next" onclick="nextSlide()">&#10095;</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="~/js/index.js" asp-append-version="true"></script>
+</body>
+</html>

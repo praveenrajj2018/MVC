@@ -1,0 +1,29 @@
+.carousel-item {
+    display: none;
+    text-align: center;
+    height: 200px;
+    line-height: 200px;
+    color: white;
+    font-size: 24px;
+    position: relative;
+}
+.carousel-item.active {
+    display: block;
+}
+.carousel-control-prev, .carousel-control-next {
+    cursor: pointer;
+    color: black;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+}
+.carousel-control-prev {
+    left: 10px;
+}
+.carousel-control-next {
+    right: 10px;
+}

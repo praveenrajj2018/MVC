@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Next Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ775eaSPhE8qDJE1TMfGAd47XFrn5eos1M" crossorigin="anonymous">
+    <title>@ViewData["Title"] - LoginApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/nextpage.css" asp-append-version="true" />
+</head>
+<body style="margin-right:210px">
+    <div class="container-fluid" style="margin-top:140px">
+        <div id="customCarousel">
+            <h4>Welcome TestUser,</h4>
+            <div class="carousel-item active" style="background-color: violet;">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    Back of House 3.19 is here
+                </div>
+                <div class="carousel-control-prev" onclick="prevSlide()">&#10094;</div>
+                <div class="carousel-control-next" onclick="nextSlide()">&#10095;</div>
+            </div>
+            <div class="carousel-item" style="background-color: lightgreen;">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    Connect join us on March 19-20 in Phoenix
+                </div>
+                <div class="carousel-control-prev" onclick="prevSlide()">&#10094;</div>
+                <div class="carousel-control-next" onclick="nextSlide()">&#10095;</div>
+            </div>
+            <div class="carousel-item" style="background-color: blue;">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    See our all-new meals order solution
+                </div>
+                <div class="carousel-control-prev" onclick="prevSlide()">&#10094;</div>
+                <div class="carousel-control-next" onclick="nextSlide()">&#10095;</div>
+            </div>
+        </div>
+       
+    </div><div>
+     <img src="https://cdn-gxx.dataweavers.io/-/media/heartland/school-solutions/cafeteria_management_mosaic_boh_inventory.jpg?h=774&w=554&la=en&hash=652D87ACDFE2F9AE35C47D7FF027D8C7" height='350px' width='350px' style="margin-top:230px">
+     <img src="https://cdn-gxx.dataweavers.io/-/media/heartland/school-solutions/cafeteria_management_mosaic_boh_menu_planning.jpg?h=745&w=577&la=en&hash=0AAD23C4FD54B21CC4A2F0C74A53EBAF"height='350px' width='350px' style="margin-left:210px;margin-top:220px">
+</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="~/js/nextpage.js" asp-append-version="true"></script>
+</body>
+</html>

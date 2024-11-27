@@ -1,0 +1,340 @@
+2024-11-21 15:54:22.0299 INFO User profile is available. Using 'C:\Users\praveen.janarthanam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-21 15:54:22.1222 INFO Now listening on: http://localhost:5019
+2024-11-21 15:54:22.1222 INFO Application started. Press Ctrl+C to shut down.
+2024-11-21 15:54:22.1222 INFO Hosting environment: Development
+2024-11-21 15:54:22.1222 INFO Content root path: C:\Users\praveen.janarthanam\Desktop\MVC\LoginApp
+2024-11-21 15:55:21.1515 INFO Request starting HTTP/1.1 GET http://localhost:5019/Measurements/Measurement - - -
+2024-11-21 15:55:21.1515 WARN Failed to determine the https port for redirect.
+2024-11-21 15:55:21.1714 INFO Executing endpoint 'LoginApp.Controllers.MeasurementsController.Measurement (LoginApp)'
+2024-11-21 15:55:21.1924 INFO Route matched with {action = "Measurement", controller = "Measurements"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Measurement() on controller LoginApp.Controllers.MeasurementsController (LoginApp).
+2024-11-21 15:55:22.0632 INFO Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[MeasurementName], [m].[OG_L], [m].[Source], [m].[Weight]
+FROM [Measurements] AS [m]
+2024-11-21 15:55:22.1027 INFO Executing ViewResult, running view ~/Views/Home/Measurement.cshtml.
+2024-11-21 15:55:22.1671 INFO Executed ViewResult - view ~/Views/Home/Measurement.cshtml executed in 62.2273ms.
+2024-11-21 15:55:22.1671 INFO Executed action LoginApp.Controllers.MeasurementsController.Measurement (LoginApp) in 974.9665ms
+2024-11-21 15:55:22.1671 INFO Executed endpoint 'LoginApp.Controllers.MeasurementsController.Measurement (LoginApp)'
+2024-11-21 15:55:22.1801 INFO Request finished HTTP/1.1 GET http://localhost:5019/Measurements/Measurement - 200 - text/html;+charset=utf-8 1028.8834ms
+2024-11-21 15:55:22.2077 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 15:55:22.2077 INFO Request starting HTTP/1.1 GET http://localhost:5019/LoginApp.styles.css?v=UilBQYh_T4hyatYw8H1wE73oFYPoT0wUbZ5zQAwEWOc - - -
+2024-11-21 15:55:22.2077 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 2.9402ms
+2024-11-21 15:55:22.2077 INFO The file /LoginApp.styles.css was not modified
+2024-11-21 15:55:22.2077 INFO Request finished HTTP/1.1 GET http://localhost:5019/LoginApp.styles.css?v=UilBQYh_T4hyatYw8H1wE73oFYPoT0wUbZ5zQAwEWOc - 304 - text/css 9.3990ms
+2024-11-21 15:57:18.8342 INFO Application is shutting down...
+2024-11-21 15:57:28.5945 INFO User profile is available. Using 'C:\Users\praveen.janarthanam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-21 15:57:28.6650 INFO Now listening on: http://localhost:5019
+2024-11-21 15:57:28.6650 INFO Application started. Press Ctrl+C to shut down.
+2024-11-21 15:57:28.6650 INFO Hosting environment: Development
+2024-11-21 15:57:28.6650 INFO Content root path: C:\Users\praveen.janarthanam\Desktop\MVC\LoginApp
+2024-11-21 15:57:34.3722 INFO Request starting HTTP/1.1 GET http://localhost:5019/Measurements/Measurement - - -
+2024-11-21 15:57:34.3800 WARN Failed to determine the https port for redirect.
+2024-11-21 15:57:34.3800 INFO Executing endpoint 'LoginApp.Controllers.MeasurementsController.Measurement (LoginApp)'
+2024-11-21 15:57:34.4067 INFO Route matched with {action = "Measurement", controller = "Measurements"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Measurement() on controller LoginApp.Controllers.MeasurementsController (LoginApp).
+2024-11-21 15:57:35.0723 INFO Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[MeasurementName], [m].[OG_L], [m].[Source], [m].[Weight]
+FROM [Measurements] AS [m]
+2024-11-21 15:57:35.1142 INFO Executing ViewResult, running view ~/Views/Home/Measurement.cshtml.
+2024-11-21 15:57:35.1605 INFO Executed ViewResult - view ~/Views/Home/Measurement.cshtml executed in 45.3475ms.
+2024-11-21 15:57:35.1605 INFO Executed action LoginApp.Controllers.MeasurementsController.Measurement (LoginApp) in 754.0539ms
+2024-11-21 15:57:35.1605 INFO Executed endpoint 'LoginApp.Controllers.MeasurementsController.Measurement (LoginApp)'
+2024-11-21 15:57:35.1605 INFO Request finished HTTP/1.1 GET http://localhost:5019/Measurements/Measurement - 200 - text/html;+charset=utf-8 795.5686ms
+2024-11-21 15:57:35.1784 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 15:57:35.1784 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 1.3793ms
+2024-11-21 15:57:36.8991 INFO Request starting HTTP/1.1 GET http://localhost:5019/Measurements/Measurement - - -
+2024-11-21 15:57:36.8991 INFO Executing endpoint 'LoginApp.Controllers.MeasurementsController.Measurement (LoginApp)'
+2024-11-21 15:57:36.8991 INFO Route matched with {action = "Measurement", controller = "Measurements"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Measurement() on controller LoginApp.Controllers.MeasurementsController (LoginApp).
+2024-11-21 15:57:36.9150 INFO Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[MeasurementName], [m].[OG_L], [m].[Source], [m].[Weight]
+FROM [Measurements] AS [m]
+2024-11-21 15:57:36.9150 INFO Executing ViewResult, running view ~/Views/Home/Measurement.cshtml.
+2024-11-21 15:57:36.9150 INFO Executed ViewResult - view ~/Views/Home/Measurement.cshtml executed in 2.241ms.
+2024-11-21 15:57:36.9150 INFO Executed action LoginApp.Controllers.MeasurementsController.Measurement (LoginApp) in 15.682ms
+2024-11-21 15:57:36.9150 INFO Executed endpoint 'LoginApp.Controllers.MeasurementsController.Measurement (LoginApp)'
+2024-11-21 15:57:36.9150 INFO Request finished HTTP/1.1 GET http://localhost:5019/Measurements/Measurement - 200 - text/html;+charset=utf-8 19.2594ms
+2024-11-21 15:57:36.9396 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 15:57:36.9396 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.3533ms
+2024-11-21 15:57:41.3830 INFO Request starting HTTP/1.1 GET http://localhost:5019/Measurements/Measurement - - -
+2024-11-21 15:57:41.3830 INFO Executing endpoint 'LoginApp.Controllers.MeasurementsController.Measurement (LoginApp)'
+2024-11-21 15:57:41.3830 INFO Route matched with {action = "Measurement", controller = "Measurements"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Measurement() on controller LoginApp.Controllers.MeasurementsController (LoginApp).
+2024-11-21 15:57:41.4301 INFO Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[MeasurementName], [m].[OG_L], [m].[Source], [m].[Weight]
+FROM [Measurements] AS [m]
+2024-11-21 15:57:41.4301 INFO Executing ViewResult, running view ~/Views/Home/Measurement.cshtml.
+2024-11-21 15:57:41.4301 INFO Executed ViewResult - view ~/Views/Home/Measurement.cshtml executed in 0.9664ms.
+2024-11-21 15:57:41.4301 INFO Executed action LoginApp.Controllers.MeasurementsController.Measurement (LoginApp) in 46.5939ms
+2024-11-21 15:57:41.4301 INFO Executed endpoint 'LoginApp.Controllers.MeasurementsController.Measurement (LoginApp)'
+2024-11-21 15:57:41.4301 INFO Request finished HTTP/1.1 GET http://localhost:5019/Measurements/Measurement - 200 - text/html;+charset=utf-8 48.7720ms
+2024-11-21 15:57:41.4606 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 15:57:41.4606 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1927ms
+2024-11-21 15:57:49.5554 INFO Request starting HTTP/1.1 GET http://localhost:5019/register/register - - -
+2024-11-21 15:57:49.5554 INFO Executing endpoint 'RegisterController.Register (LoginApp)'
+2024-11-21 15:57:49.5554 INFO Route matched with {action = "Register", controller = "Register"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller RegisterController (LoginApp).
+2024-11-21 15:57:49.5554 INFO Executing ViewResult, running view /Views/Home/Register.cshtml.
+2024-11-21 15:57:49.6176 INFO Executed ViewResult - view /Views/Home/Register.cshtml executed in 59.532ms.
+2024-11-21 15:57:49.6176 INFO Executed action RegisterController.Register (LoginApp) in 60.0373ms
+2024-11-21 15:57:49.6176 INFO Executed endpoint 'RegisterController.Register (LoginApp)'
+2024-11-21 15:57:49.6176 INFO Request finished HTTP/1.1 GET http://localhost:5019/register/register - 200 - text/html;+charset=utf-8 62.4477ms
+2024-11-21 15:57:49.6402 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 15:57:49.6402 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1650ms
+2024-11-21 15:57:57.6439 INFO Request starting HTTP/1.1 POST http://localhost:5019/Register/Register - application/x-www-form-urlencoded 213
+2024-11-21 15:57:57.6449 INFO Executing endpoint 'RegisterController.Register (LoginApp)'
+2024-11-21 15:57:57.6449 INFO Route matched with {action = "Register", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(RegisterViewModel) on controller RegisterController (LoginApp).
+2024-11-21 15:57:57.7617 INFO Executed DbCommand (26ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([PasswordHash], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-11-21 15:57:57.7842 INFO User Ramesh added to the database.
+2024-11-21 15:57:57.7855 INFO User Ramesh registered successfully.
+2024-11-21 15:57:57.7855 INFO Executing RedirectResult, redirecting to /NextPage/NextPage.
+2024-11-21 15:57:57.7855 INFO Executed action RegisterController.Register (LoginApp) in 137.0025ms
+2024-11-21 15:57:57.7855 INFO Executed endpoint 'RegisterController.Register (LoginApp)'
+2024-11-21 15:57:57.7855 INFO Request finished HTTP/1.1 POST http://localhost:5019/Register/Register - 302 0 - 146.3200ms
+2024-11-21 15:57:57.7855 INFO Request starting HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - - -
+2024-11-21 15:57:57.7855 INFO Executing endpoint 'NextPageController.NextPage (LoginApp)'
+2024-11-21 15:57:57.7855 INFO Route matched with {action = "NextPage", controller = "NextPage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NextPage() on controller NextPageController (LoginApp).
+2024-11-21 15:57:57.7855 INFO Executing ViewResult, running view /Views/Home/NextPage.cshtml.
+2024-11-21 15:57:57.8057 INFO Executed ViewResult - view /Views/Home/NextPage.cshtml executed in 12.1685ms.
+2024-11-21 15:57:57.8057 INFO Executed action NextPageController.NextPage (LoginApp) in 12.4234ms
+2024-11-21 15:57:57.8057 INFO Executed endpoint 'NextPageController.NextPage (LoginApp)'
+2024-11-21 15:57:57.8057 INFO Request finished HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - 200 - text/html;+charset=utf-8 13.1876ms
+2024-11-21 15:57:57.8292 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 15:57:57.8292 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.2746ms
+2024-11-21 15:58:21.5778 INFO Request starting HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - - -
+2024-11-21 15:58:21.5778 INFO Executing endpoint 'NextPageController.NextPage (LoginApp)'
+2024-11-21 15:58:21.5778 INFO Route matched with {action = "NextPage", controller = "NextPage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NextPage() on controller NextPageController (LoginApp).
+2024-11-21 15:58:21.5778 INFO Executing ViewResult, running view /Views/Home/NextPage.cshtml.
+2024-11-21 15:58:21.5778 INFO Executed ViewResult - view /Views/Home/NextPage.cshtml executed in 0.8751ms.
+2024-11-21 15:58:21.5778 INFO Executed action NextPageController.NextPage (LoginApp) in 0.9981ms
+2024-11-21 15:58:21.5778 INFO Executed endpoint 'NextPageController.NextPage (LoginApp)'
+2024-11-21 15:58:21.5778 INFO Request finished HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - 200 - text/html;+charset=utf-8 1.6469ms
+2024-11-21 15:58:21.6004 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 15:58:21.6004 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1236ms
+2024-11-21 16:01:47.9232 INFO Request starting HTTP/1.1 GET http://localhost:5019/Measurements/Measurement - - -
+2024-11-21 16:01:47.9257 INFO Executing endpoint 'LoginApp.Controllers.MeasurementsController.Measurement (LoginApp)'
+2024-11-21 16:01:47.9257 INFO Route matched with {action = "Measurement", controller = "Measurements"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Measurement() on controller LoginApp.Controllers.MeasurementsController (LoginApp).
+2024-11-21 16:01:47.9257 INFO Request starting HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - - -
+2024-11-21 16:01:47.9257 INFO Executing endpoint 'NextPageController.NextPage (LoginApp)'
+2024-11-21 16:01:47.9257 INFO Route matched with {action = "NextPage", controller = "NextPage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NextPage() on controller NextPageController (LoginApp).
+2024-11-21 16:01:47.9257 INFO Executing ViewResult, running view /Views/Home/NextPage.cshtml.
+2024-11-21 16:01:47.9257 INFO Executed ViewResult - view /Views/Home/NextPage.cshtml executed in 0.7443ms.
+2024-11-21 16:01:47.9257 INFO Executed action NextPageController.NextPage (LoginApp) in 0.871ms
+2024-11-21 16:01:47.9257 INFO Executed endpoint 'NextPageController.NextPage (LoginApp)'
+2024-11-21 16:01:47.9257 INFO Request finished HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - 200 - text/html;+charset=utf-8 1.2132ms
+2024-11-21 16:01:47.9257 INFO Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[MeasurementName], [m].[OG_L], [m].[Source], [m].[Weight]
+FROM [Measurements] AS [m]
+2024-11-21 16:01:47.9257 INFO Executing ViewResult, running view ~/Views/Home/Measurement.cshtml.
+2024-11-21 16:01:47.9257 INFO Executed ViewResult - view ~/Views/Home/Measurement.cshtml executed in 0.8312ms.
+2024-11-21 16:01:47.9257 INFO Executed action LoginApp.Controllers.MeasurementsController.Measurement (LoginApp) in 10.1083ms
+2024-11-21 16:01:47.9257 INFO Executed endpoint 'LoginApp.Controllers.MeasurementsController.Measurement (LoginApp)'
+2024-11-21 16:01:47.9257 INFO Request finished HTTP/1.1 GET http://localhost:5019/Measurements/Measurement - 200 - text/html;+charset=utf-8 13.4698ms
+2024-11-21 16:01:47.9619 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:01:47.9619 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1512ms
+2024-11-21 16:01:47.9900 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:01:47.9900 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1240ms
+2024-11-21 16:01:55.7596 INFO Request starting HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - - -
+2024-11-21 16:01:55.7596 INFO Executing endpoint 'NextPageController.NextPage (LoginApp)'
+2024-11-21 16:01:55.7596 INFO Route matched with {action = "NextPage", controller = "NextPage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NextPage() on controller NextPageController (LoginApp).
+2024-11-21 16:01:55.7596 INFO Executing ViewResult, running view /Views/Home/NextPage.cshtml.
+2024-11-21 16:01:55.7596 INFO Executed ViewResult - view /Views/Home/NextPage.cshtml executed in 0.6116ms.
+2024-11-21 16:01:55.7596 INFO Executed action NextPageController.NextPage (LoginApp) in 0.7164ms
+2024-11-21 16:01:55.7596 INFO Executed endpoint 'NextPageController.NextPage (LoginApp)'
+2024-11-21 16:01:55.7596 INFO Request finished HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - 200 - text/html;+charset=utf-8 1.2885ms
+2024-11-21 16:01:55.7596 INFO Request starting HTTP/1.1 GET http://localhost:5019/Measurements/Measurement - - -
+2024-11-21 16:01:55.7596 INFO Executing endpoint 'LoginApp.Controllers.MeasurementsController.Measurement (LoginApp)'
+2024-11-21 16:01:55.7596 INFO Route matched with {action = "Measurement", controller = "Measurements"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Measurement() on controller LoginApp.Controllers.MeasurementsController (LoginApp).
+2024-11-21 16:01:55.7596 INFO Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[MeasurementName], [m].[OG_L], [m].[Source], [m].[Weight]
+FROM [Measurements] AS [m]
+2024-11-21 16:01:55.7596 INFO Executing ViewResult, running view ~/Views/Home/Measurement.cshtml.
+2024-11-21 16:01:55.7596 INFO Executed ViewResult - view ~/Views/Home/Measurement.cshtml executed in 0.7771ms.
+2024-11-21 16:01:55.7596 INFO Executed action LoginApp.Controllers.MeasurementsController.Measurement (LoginApp) in 2.9773ms
+2024-11-21 16:01:55.7596 INFO Executed endpoint 'LoginApp.Controllers.MeasurementsController.Measurement (LoginApp)'
+2024-11-21 16:01:55.7596 INFO Request finished HTTP/1.1 GET http://localhost:5019/Measurements/Measurement - 200 - text/html;+charset=utf-8 3.3938ms
+2024-11-21 16:01:55.7897 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:01:55.7897 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.4162ms
+2024-11-21 16:01:55.8349 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:01:55.8349 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1099ms
+2024-11-21 16:02:13.9252 INFO Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/UpdateIngredient/1 - - -
+2024-11-21 16:02:13.9252 INFO Executing endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-11-21 16:02:13.9252 INFO Route matched with {action = "UpdateIngredient", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateIngredient(Int32) on controller IngredientsController (LoginApp).
+2024-11-21 16:02:13.9881 INFO Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+WHERE [i].[Id] = @__id_0
+2024-11-21 16:02:13.9881 INFO Executing ViewResult, running view /Views/Home/UpdateIngredient.cshtml.
+2024-11-21 16:02:14.0740 INFO Executed ViewResult - view /Views/Home/UpdateIngredient.cshtml executed in 81.1591ms.
+2024-11-21 16:02:14.0740 INFO Executed action IngredientsController.UpdateIngredient (LoginApp) in 146.9897ms
+2024-11-21 16:02:14.0740 INFO Executed endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-11-21 16:02:14.0740 INFO Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/UpdateIngredient/1 - 200 - text/html;+charset=utf-8 148.9886ms
+2024-11-21 16:02:14.0976 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:02:14.0976 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1587ms
+2024-11-21 16:02:14.9521 INFO Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - - -
+2024-11-21 16:02:14.9521 INFO Executing endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-11-21 16:02:14.9570 INFO Route matched with {action = "Ingredients", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Ingredients() on controller IngredientsController (LoginApp).
+2024-11-21 16:02:14.9570 INFO Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+2024-11-21 16:02:14.9570 INFO Executing ViewResult, running view /Views/Home/Ingredients.cshtml.
+2024-11-21 16:02:14.9841 INFO Executed ViewResult - view /Views/Home/Ingredients.cshtml executed in 21.5648ms.
+2024-11-21 16:02:14.9841 INFO Executed action IngredientsController.Ingredients (LoginApp) in 27.091ms
+2024-11-21 16:02:14.9841 INFO Executed endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-11-21 16:02:14.9841 INFO Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - 200 - text/html;+charset=utf-8 32.1800ms
+2024-11-21 16:02:15.0071 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:02:15.0071 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1057ms
+2024-11-21 16:02:15.7303 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:02:15.7303 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1333ms
+2024-11-21 16:02:16.6037 INFO Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/UpdateIngredient/2 - - -
+2024-11-21 16:02:16.6037 INFO Executing endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-11-21 16:02:16.6037 INFO Route matched with {action = "UpdateIngredient", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateIngredient(Int32) on controller IngredientsController (LoginApp).
+2024-11-21 16:02:16.6037 INFO Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+WHERE [i].[Id] = @__id_0
+2024-11-21 16:02:16.6037 INFO Executing ViewResult, running view /Views/Home/UpdateIngredient.cshtml.
+2024-11-21 16:02:16.6037 INFO Executed ViewResult - view /Views/Home/UpdateIngredient.cshtml executed in 1.3927ms.
+2024-11-21 16:02:16.6037 INFO Executed action IngredientsController.UpdateIngredient (LoginApp) in 5.7218ms
+2024-11-21 16:02:16.6037 INFO Executed endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-11-21 16:02:16.6037 INFO Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/UpdateIngredient/2 - 200 - text/html;+charset=utf-8 6.3709ms
+2024-11-21 16:02:16.6327 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:02:16.6327 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.2673ms
+2024-11-21 16:02:17.3690 INFO Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - - -
+2024-11-21 16:02:17.3690 INFO Executing endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-11-21 16:02:17.3690 INFO Route matched with {action = "Ingredients", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Ingredients() on controller IngredientsController (LoginApp).
+2024-11-21 16:02:17.3690 INFO Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+2024-11-21 16:02:17.3690 INFO Executing ViewResult, running view /Views/Home/Ingredients.cshtml.
+2024-11-21 16:02:17.3690 INFO Executed ViewResult - view /Views/Home/Ingredients.cshtml executed in 0.8849ms.
+2024-11-21 16:02:17.3690 INFO Executed action IngredientsController.Ingredients (LoginApp) in 2.0581ms
+2024-11-21 16:02:17.3690 INFO Executed endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-11-21 16:02:17.3690 INFO Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - 200 - text/html;+charset=utf-8 2.5186ms
+2024-11-21 16:02:17.3910 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:02:17.3910 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1057ms
+2024-11-21 16:02:18.0570 INFO Request starting HTTP/1.1 GET http://localhost:5019/Create/Create - - -
+2024-11-21 16:02:18.0570 INFO Executing endpoint 'CreateController.Create (LoginApp)'
+2024-11-21 16:02:18.0570 INFO Route matched with {action = "Create", controller = "Create"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller CreateController (LoginApp).
+2024-11-21 16:02:18.0570 INFO Executing ViewResult, running view /Views/Home/Create.cshtml.
+2024-11-21 16:02:18.0835 INFO Executed ViewResult - view /Views/Home/Create.cshtml executed in 24.5866ms.
+2024-11-21 16:02:18.0835 INFO Executed action CreateController.Create (LoginApp) in 25.1513ms
+2024-11-21 16:02:18.0835 INFO Executed endpoint 'CreateController.Create (LoginApp)'
+2024-11-21 16:02:18.0835 INFO Request finished HTTP/1.1 GET http://localhost:5019/Create/Create - 200 - text/html;+charset=utf-8 26.9273ms
+2024-11-21 16:02:18.1039 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:02:18.1039 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1472ms
+2024-11-21 16:02:18.7953 INFO Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/UpdateIngredient/1 - - -
+2024-11-21 16:02:18.7953 INFO Executing endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-11-21 16:02:18.7953 INFO Route matched with {action = "UpdateIngredient", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateIngredient(Int32) on controller IngredientsController (LoginApp).
+2024-11-21 16:02:18.7953 INFO Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+WHERE [i].[Id] = @__id_0
+2024-11-21 16:02:18.7953 INFO Executing ViewResult, running view /Views/Home/UpdateIngredient.cshtml.
+2024-11-21 16:02:18.8014 INFO Executed ViewResult - view /Views/Home/UpdateIngredient.cshtml executed in 1.8965ms.
+2024-11-21 16:02:18.8014 INFO Executed action IngredientsController.UpdateIngredient (LoginApp) in 5.8145ms
+2024-11-21 16:02:18.8014 INFO Executed endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-11-21 16:02:18.8014 INFO Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/UpdateIngredient/1 - 200 - text/html;+charset=utf-8 6.4349ms
+2024-11-21 16:02:18.8253 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:02:18.8253 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1217ms
+2024-11-21 16:02:19.5087 INFO Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - - -
+2024-11-21 16:02:19.5087 INFO Executing endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-11-21 16:02:19.5087 INFO Route matched with {action = "Ingredients", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Ingredients() on controller IngredientsController (LoginApp).
+2024-11-21 16:02:19.5087 INFO Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+2024-11-21 16:02:19.5087 INFO Executing ViewResult, running view /Views/Home/Ingredients.cshtml.
+2024-11-21 16:02:19.5087 INFO Executed ViewResult - view /Views/Home/Ingredients.cshtml executed in 0.9742ms.
+2024-11-21 16:02:19.5087 INFO Executed action IngredientsController.Ingredients (LoginApp) in 2.3765ms
+2024-11-21 16:02:19.5087 INFO Executed endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-11-21 16:02:19.5087 INFO Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - 200 - text/html;+charset=utf-8 2.8511ms
+2024-11-21 16:02:19.5320 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:02:19.5320 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1064ms
+2024-11-21 16:02:21.6589 INFO Request starting HTTP/1.1 GET http://localhost:5019/register/register - - -
+2024-11-21 16:02:21.6589 INFO Executing endpoint 'RegisterController.Register (LoginApp)'
+2024-11-21 16:02:21.6589 INFO Route matched with {action = "Register", controller = "Register"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller RegisterController (LoginApp).
+2024-11-21 16:02:21.6589 INFO Executing ViewResult, running view /Views/Home/Register.cshtml.
+2024-11-21 16:02:21.6589 INFO Executed ViewResult - view /Views/Home/Register.cshtml executed in 1.0042ms.
+2024-11-21 16:02:21.6589 INFO Executed action RegisterController.Register (LoginApp) in 1.9441ms
+2024-11-21 16:02:21.6589 INFO Executed endpoint 'RegisterController.Register (LoginApp)'
+2024-11-21 16:02:21.6589 INFO Request finished HTTP/1.1 GET http://localhost:5019/register/register - 200 - text/html;+charset=utf-8 2.4618ms
+2024-11-21 16:02:21.6841 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:02:21.6841 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1774ms
+2024-11-21 16:02:32.0289 INFO Request starting HTTP/1.1 POST http://localhost:5019/Register/Register - application/x-www-form-urlencoded 212
+2024-11-21 16:02:32.0289 INFO Executing endpoint 'RegisterController.Register (LoginApp)'
+2024-11-21 16:02:32.0289 INFO Route matched with {action = "Register", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(RegisterViewModel) on controller RegisterController (LoginApp).
+2024-11-21 16:02:32.0401 INFO Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([PasswordHash], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-11-21 16:02:32.0401 INFO User kaali added to the database.
+2024-11-21 16:02:32.0401 INFO User kaali registered successfully.
+2024-11-21 16:02:32.0401 INFO Executing RedirectResult, redirecting to /NextPage/NextPage.
+2024-11-21 16:02:32.0401 INFO Executed action RegisterController.Register (LoginApp) in 11.1391ms
+2024-11-21 16:02:32.0401 INFO Executed endpoint 'RegisterController.Register (LoginApp)'
+2024-11-21 16:02:32.0401 INFO Request finished HTTP/1.1 POST http://localhost:5019/Register/Register - 302 0 - 11.9287ms
+2024-11-21 16:02:32.0528 INFO Request starting HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - - -
+2024-11-21 16:02:32.0528 INFO Executing endpoint 'NextPageController.NextPage (LoginApp)'
+2024-11-21 16:02:32.0528 INFO Route matched with {action = "NextPage", controller = "NextPage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NextPage() on controller NextPageController (LoginApp).
+2024-11-21 16:02:32.0528 INFO Executing ViewResult, running view /Views/Home/NextPage.cshtml.
+2024-11-21 16:02:32.0528 INFO Executed ViewResult - view /Views/Home/NextPage.cshtml executed in 0.4437ms.
+2024-11-21 16:02:32.0528 INFO Executed action NextPageController.NextPage (LoginApp) in 0.5706ms
+2024-11-21 16:02:32.0528 INFO Executed endpoint 'NextPageController.NextPage (LoginApp)'
+2024-11-21 16:02:32.0528 INFO Request finished HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - 200 - text/html;+charset=utf-8 0.8924ms
+2024-11-21 16:02:32.0757 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:02:32.0757 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1179ms
+2024-11-21 16:02:40.0138 INFO Application is shutting down...
+2024-11-21 16:02:57.7945 INFO User profile is available. Using 'C:\Users\praveen.janarthanam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-21 16:02:57.8884 INFO Now listening on: http://localhost:5019
+2024-11-21 16:02:57.8884 INFO Application started. Press Ctrl+C to shut down.
+2024-11-21 16:02:57.8884 INFO Hosting environment: Development
+2024-11-21 16:02:57.8884 INFO Content root path: C:\Users\praveen.janarthanam\Desktop\MVC\LoginApp
+2024-11-21 16:03:08.3777 INFO Request starting HTTP/1.1 GET http://localhost:5019/register/register - - -
+2024-11-21 16:03:08.3846 WARN Failed to determine the https port for redirect.
+2024-11-21 16:03:08.3981 INFO Executing endpoint 'RegisterController.Register (LoginApp)'
+2024-11-21 16:03:08.4139 INFO Route matched with {action = "Register", controller = "Register"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller RegisterController (LoginApp).
+2024-11-21 16:03:08.5462 INFO Executing ViewResult, running view /Views/Home/Register.cshtml.
+2024-11-21 16:03:08.6832 INFO Executed ViewResult - view /Views/Home/Register.cshtml executed in 136.2832ms.
+2024-11-21 16:03:08.6832 INFO Executed action RegisterController.Register (LoginApp) in 269.6479ms
+2024-11-21 16:03:08.6832 INFO Executed endpoint 'RegisterController.Register (LoginApp)'
+2024-11-21 16:03:08.6832 INFO Request finished HTTP/1.1 GET http://localhost:5019/register/register - 200 - text/html;+charset=utf-8 309.8418ms
+2024-11-21 16:03:08.6988 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:03:08.6988 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 1.2532ms
+2024-11-21 16:03:17.9604 INFO Request starting HTTP/1.1 POST http://localhost:5019/Register/Register - application/x-www-form-urlencoded 212
+2024-11-21 16:03:17.9604 INFO Executing endpoint 'RegisterController.Register (LoginApp)'
+2024-11-21 16:03:17.9604 INFO Route matched with {action = "Register", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(RegisterViewModel) on controller RegisterController (LoginApp).
+2024-11-21 16:03:18.7984 INFO Executed DbCommand (33ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([PasswordHash], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-11-21 16:03:18.8254 INFO User surya added to the database.
+2024-11-21 16:03:18.8254 INFO User surya registered successfully.
+2024-11-21 16:03:18.8254 INFO Executing RedirectResult, redirecting to /NextPage/NextPage.
+2024-11-21 16:03:18.8254 INFO Executed action RegisterController.Register (LoginApp) in 860.4073ms
+2024-11-21 16:03:18.8254 INFO Executed endpoint 'RegisterController.Register (LoginApp)'
+2024-11-21 16:03:18.8335 INFO Request finished HTTP/1.1 POST http://localhost:5019/Register/Register - 302 0 - 873.0402ms
+2024-11-21 16:03:18.8335 INFO Request starting HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - - -
+2024-11-21 16:03:18.8335 INFO Executing endpoint 'NextPageController.NextPage (LoginApp)'
+2024-11-21 16:03:18.8335 INFO Route matched with {action = "NextPage", controller = "NextPage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NextPage() on controller NextPageController (LoginApp).
+2024-11-21 16:03:18.8335 INFO Executing ViewResult, running view /Views/Home/NextPage.cshtml.
+2024-11-21 16:03:18.8494 INFO Executed ViewResult - view /Views/Home/NextPage.cshtml executed in 14.4334ms.
+2024-11-21 16:03:18.8494 INFO Executed action NextPageController.NextPage (LoginApp) in 14.7243ms
+2024-11-21 16:03:18.8494 INFO Executed endpoint 'NextPageController.NextPage (LoginApp)'
+2024-11-21 16:03:18.8494 INFO Request finished HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - 200 - text/html;+charset=utf-8 15.9742ms
+2024-11-21 16:03:18.8697 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:03:18.8697 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.3573ms
+2024-11-21 16:03:29.5326 INFO Request starting HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - - -
+2024-11-21 16:03:29.5326 INFO Executing endpoint 'NextPageController.NextPage (LoginApp)'
+2024-11-21 16:03:29.5326 INFO Route matched with {action = "NextPage", controller = "NextPage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NextPage() on controller NextPageController (LoginApp).
+2024-11-21 16:03:29.5333 INFO Executing ViewResult, running view /Views/Home/NextPage.cshtml.
+2024-11-21 16:03:29.5333 INFO Executed ViewResult - view /Views/Home/NextPage.cshtml executed in 0.6886ms.
+2024-11-21 16:03:29.5333 INFO Executed action NextPageController.NextPage (LoginApp) in 0.77ms
+2024-11-21 16:03:29.5333 INFO Executed endpoint 'NextPageController.NextPage (LoginApp)'
+2024-11-21 16:03:29.5333 INFO Request finished HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - 200 - text/html;+charset=utf-8 1.4906ms
+2024-11-21 16:03:29.5538 INFO Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - - -
+2024-11-21 16:03:29.5538 INFO Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript;+charset=utf-8 0.1684ms
+2024-11-21 16:05:24.0181 INFO Application is shutting down...

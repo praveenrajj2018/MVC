@@ -1,0 +1,340 @@
+@model IEnumerable<LoginApp.Models.Measurement>
+
+@{
+    ViewData["Title"] = "Measurement";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="anonymous">
+    <title>@ViewData["Title"] - LoginApp</title>
+    <style>
+        /* Center the modal vertically and horizontally */
+        .modal-dialog-centered {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .update-input {
+            width: 80px;
+            display: inline-block;
+        }
+
+        .update-button {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="margin-top:120px">
+        
+        <button class="btn btn-success mb-3" id="openModalBtn" style="margin-top:30px">Add</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Measurement</th>
+                    <th>Weight</th>
+                    <th>O/G/L</th>
+                    <th>Source</th>
+                </tr>
+            </thead>
+            <tbody id="measurementsTable">
+                @foreach (var item in Model)
+                {
+                    <tr data-id="@item.Id">
+                        <td><a href="javascript:void(0)" class="measurement-link" data-id="@item.Id">@item.MeasurementName</a></td>
+                        <td><input type="text" class="update-input" value="@item.Weight"></td>
+                        <td><input type="text" class="update-input" value="@item.OG_L"></td>
+                        <td><input type="text" class="update-input" value="@item.Source"></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <button id="updateAllBtn" class="btn btn-primary update-button">Update</button>
+    </div>
+
+    <!-- Add Measurement Modal -->
+    <div class="modal fade" id="addMeasurementModal" tabindex="-1" role="dialog" aria-labelledby="addMeasurementLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addMeasurementLabel">Measurement</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="addMeasurementForm">
+                        <div class="form-group">
+                            <label for="measurement">Measurement</label>
+                            <input type="text" class="form-control" id="measurement" name="MeasurementName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">Weight</label>
+                            <input type="number" class="form-control" id="weight" name="Weight" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="og_l">O/G/L</label>
+                            <input type="text" class="form-control" id="og_l" name="OG_L" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="source">Source</label>
+                            <input type="text" class="form-control" id="source" name="Source" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Add</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cancelBtn">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Update/Delete Measurement Modal -->
+    <div class="modal fade" id="updateMeasurementModal" tabindex="-1" role="dialog" aria-labelledby="updateMeasurementLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateMeasurementLabel">Measurement</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="updateMeasurementForm">
+                        <input type="hidden" id="updateMeasurementId" name="Id">
+                        <div class="form-group">
+                            <label for="updateMeasurement">Measurement</label>
+                            <input type="text" class="form-control" id="updateMeasurementName" name="MeasurementName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="updateWeight">Weight</label>
+                            <input type="number" class="form-control" id="updateWeight" name="Weight" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="updateOg_l">O/G/L</label>
+                            <input type="text" class="form-control" id="updateOg_l" name="OG_L" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="updateSource">Source</label>
+                            <input type="text" class="form-control" id="updateSource" name="Source" required>
+                        </div>
+                       
+                        <button type="button" class="btn btn-danger" id="deleteBtn">Delete</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="updateCancelBtn">Cancel</button>
+                         <button type="submit" class="btn btn-success">Ok</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-f0n1lKuZ+J4bGo5OqVZT+vANx6P3ZSlBRuzhSi8yBdyD+jqMUp0RmBs7aZXmA4c" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJTYrxXIDNjG8pFZmYYPBZ6zKFPFIQpF0ew2v8U8IMVQ35foY" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-pjaaA8dDz/6sdImQ2R62SAyUNMRt6N8gf2cK3LS7/F9Tjt3G9lnD3Ck5dHr0ew5x" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var addMeasurementModal = new bootstrap.Modal(document.getElementById('addMeasurementModal'));
+            var updateMeasurementModal = new bootstrap.Modal(document.getElementById('updateMeasurementModal'));
+
+            // Add Measurement Modal
+            document.getElementById('openModalBtn').addEventListener('click', function() {
+                var form = document.getElementById('addMeasurementForm');
+                form.reset();
+                addMeasurementModal.show();
+            });
+
+            // Cancel button for Add Modal
+            document.getElementById('cancelBtn').addEventListener('click', function() {
+                addMeasurementModal.hide();
+            });
+
+            // Add Measurement Form Submit
+            document.getElementById('addMeasurementForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                var formData = new FormData(this);
+                var data = {};
+                formData.forEach((value, key) => { data[key] = value; });
+
+                fetch('@Url.Action("AddMeasurement", "Measurements")', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        var newRow = `<tr data-id="${data.measurement.id}">
+                                        <td><a href="javascript:void(0)" class="measurement-link" data-id="${data.measurement.id}">${data.measurement.measurementName}</a></td>
+                                        <td><input type="text" class="update-input" value="${data.measurement.weight}"></td>
+                                        <td><input type="text" class="update-input" value="${data.measurement.oG_L}"></td>
+                                        <td><input type="text" class="update-input" value="${data.measurement.source}"></td>
+                                      </tr>`;
+                        document.getElementById('measurementsTable').innerHTML += newRow;
+                        addMeasurementModal.hide();
+                        attachInputChangeHandler(); // Re-attach handlers for new elements
+                                                attachMeasurementLinkClickHandlers(); // Re-attach handlers for new elements
+                    } else {
+                        alert(data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+
+            // Attach event handler to input boxes to show the update button
+            function attachInputChangeHandler() {
+                document.querySelectorAll('.update-input').forEach(input => {
+                    input.addEventListener('change', function() {
+                        document.getElementById('updateAllBtn').style.display = 'block';
+                    });
+                });
+            }
+
+            attachInputChangeHandler(); // Attach handlers on page load
+
+            // Attach event handler for measurement links to open the update modal
+            function attachMeasurementLinkClickHandlers() {
+                document.querySelectorAll('.measurement-link').forEach(link => {
+                    link.addEventListener('click', function(event) {
+                        var measurementId = this.getAttribute('data-id');
+
+                        // Fetch measurement data
+                        fetch(`@Url.Action("GetMeasurement", "Measurements")/${measurementId}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                var form = document.getElementById('updateMeasurementForm');
+                                form.reset();
+
+                                document.getElementById('updateMeasurementId').value = data.measurement.id;
+                                document.getElementById('updateMeasurementName').value = data.measurement.measurementName;
+                                document.getElementById('updateWeight').value = data.measurement.weight;
+                                document.getElementById('updateOg_l').value = data.measurement.oG_L;
+                                document.getElementById('updateSource').value = data.measurement.source;
+
+                                updateMeasurementModal.show();
+                            } else {
+                                alert(data.message);
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
+                    });
+                });
+            }
+
+            attachMeasurementLinkClickHandlers(); // Attach handlers on page load
+
+            // Update Measurement Form Submit
+            document.getElementById('updateMeasurementForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                var formData = new FormData(this);
+                var data = {};
+                formData.forEach((value, key) => { data[key] = value; });
+
+                fetch('@Url.Action("UpdateMeasurement", "Measurements")', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Update the row in the table
+                        var row = document.querySelector(`.measurement-link[data-id="${data.measurement.id}"]`).closest('tr');
+                        row.querySelector('td:nth-child(1)').innerHTML = `<a href="javascript:void(0)" class="measurement-link" data-id="${data.measurement.id}">${data.measurement.measurementName}</a>`;
+                        row.querySelector('td:nth-child(2) input').value = data.measurement.weight;
+                        row.querySelector('td:nth-child(3) input').value = data.measurement.oG_L;
+                        row.querySelector('td:nth-child(4) input').value = data.measurement.source;
+
+                        updateMeasurementModal.hide();
+                        attachMeasurementLinkClickHandlers(); // Re-attach handlers for updated elements
+                    } else {
+                        alert(data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+
+            // Delete Measurement
+            document.getElementById('deleteBtn').addEventListener('click', function() {
+                var measurementId = document.getElementById('updateMeasurementId').value;
+
+                fetch(`@Url.Action("DeleteMeasurement", "Measurements")/${measurementId}`, {
+                    method: 'DELETE'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Remove the row from the table
+                        var row = document.querySelector(`.measurement-link[data-id="${measurementId}"]`).closest('tr');
+                        row.remove();
+
+                        updateMeasurementModal.hide();
+                    } else {
+                        alert(data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+
+            // Cancel button for Update/Delete Modal
+            document.getElementById('updateCancelBtn').addEventListener('click', function() {
+                updateMeasurementModal.hide();
+            });
+
+            // Update All button click handler
+            document.getElementById('updateAllBtn').addEventListener('click', function() {
+                var updatedData = [];
+                document.querySelectorAll('#measurementsTable tr').forEach(row => {
+                    var id = row.getAttribute('data-id');
+                    var measurementName = row.querySelector('td:nth-child(1) a').textContent;
+                    var weight = row.querySelector('td:nth-child(2) input').value;
+                    var og_l = row.querySelector('td:nth-child(3) input').value;
+                    var source = row.querySelector('td:nth-child(4) input').value;
+
+                    updatedData.push({
+                        Id: id,
+                        MeasurementName: measurementName,
+                        Weight: weight,
+                        OG_L: og_l,
+                        Source: source
+                    });
+                });
+
+                fetch('@Url.Action("UpdateAllMeasurements", "Measurements")', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(updatedData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Measurements updated successfully.');
+                        document.getElementById('updateAllBtn').style.display = 'none';
+                    } else {
+                        alert(data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

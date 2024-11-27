@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ775eaSPhE8qDJE1TMfGAd47XFrn5eos1M" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="https://play-lh.googleusercontent.com/xo6cdxGGQ0rbRN62yFoD_lWPVlba_XfIgb0wasBGstSYYsM_fNyMZ98npKawEB13Bg=w600-h300-pc0xffffff-pd">
+    <title>Mosaic BOH</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LoginApp.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            padding-top: 20px;
+            transition: width 0.3s;
+        }
+        .sidenav.minimized {
+            width: 60px;
+        }
+        .sidenav .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+        }
+        .sidenav a {
+            padding: 8px 8px 8px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            white-space: nowrap;
+        }
+        .sidenav a .text {
+            margin-left: 10px;
+        }
+        .sidenav.minimized a .text {
+            display: none;
+        }
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        .navbar-fixed {
+            width: 100%;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 60px; /* Adjust if you have a side nav */
+            z-index: 2;
+            height: 60px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 20px;
+            transition: left 0.3s;
+        }
+        .sidenav.minimized ~ .navbar-fixed {
+            left: 60px;
+        }
+        .main-content {
+            margin-top: -52px; /* Adjust based on your navbar height */
+            margin-left: 60px; /* Same as the width of the minimized sidenav */
+            width: calc(100% - 60px);
+            padding: 0px;
+            padding-left: 160px;
+            transition: margin-left 0.3s, width 0.3s;
+        }
+        .sidenav.minimized ~ .main-content {
+            margin-left: 60px;
+            width: calc(100% - 60px);
+        }
+    </style>
+</head>
+<body class="@(ViewContext.RouteData.Values["action"].ToString() == "Register" ? "hide-nav" : "")">
+    @if (ViewContext.RouteData.Values["action"].ToString() != "Register")
+    {
+        <div class="sidenav minimized">
+            <i class="fas fa-arrow-right toggle-btn" id="toggleBtn"></i> <br/><br/>
+            <a href="@Url.Action("NextPage", "NextPage")" style="font-size:20px"><i class="fas fa-home"></i><span class="text">Home</span></a>
+            <a href="@Url.Action("Ingredients", "Ingredients")" style="font-size:20px"><i class="fas fa-carrot"></i><span class="text">Ingredients</span></a>
+            <a href="#" style="font-size:20px"><i class="fas fa-utensils"></i><span class="text">Recipe</span></a>
+            <a href="#" style="font-size:20px"><i class="fas fa-concierge-bell"></i><span class="text">Menu</span></a>
+        </div>
+        <div class="navbar-fixed">
+            <div class="dropdown" style="margin-right:140px">
+                <i class="fas fa-user" style="color:white;">TestUser</i>
+            </div>
+        </div>
+    }
+
+    <div class="main-content">
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8/SHzB6pZ7v2Q8" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6xdPxi3SWeF21FElDttw3" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-a5OmdW7zocA3x5m6Zq7z5lq9a5Zp/n5U8so9R3dWQY4dKoPmk/6PChKz6M4LOiLp" crossorigin="anonymous"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        document.getElementById('toggleBtn').addEventListener('click', function () {
+            const sidenav = document.querySelector('.sidenav');
+            sidenav.classList.toggle('minimized');
+            this.classList.toggle('fa-arrow-left');
+            this.classList.toggle('fa-arrow-right');
+        });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

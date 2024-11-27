@@ -1,0 +1,24 @@
+.centered-form {
+    max-width: 300px;
+    margin: auto;
+    background-color: black;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.centered-form .form-control {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding-left: 10px;
+}
+.centered-form label {
+    color: white;
+}
+.dropdown-arrow {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxNiAxNiI+PHBhdGggZD0iTTE0IDRMOCAxMGwtNi02bDUuNC0yTDEwIDQuNEw0LjkgOFY0TDQgNEw4bDEgMS43WiIvPjwvc3ZnPg==) no-repeat right 10px center;
+    background-size: 16px 16px;
+}

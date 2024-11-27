@@ -1,0 +1,17 @@
+/* measurement.css */
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.update-input {
+    width: 80px;
+    display: inline-block;
+}
+
+.update-button {
+    display: none;
+}

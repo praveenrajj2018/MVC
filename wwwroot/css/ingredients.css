@@ -1,0 +1,81 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+.content {
+    width: 95%;
+    max-width: 1400px;
+    text-align: center;
+}
+.centered-form {
+    background-color: black;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.centered-form .form-control {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.centered-form label {
+    color: white;
+}
+.clickable-row {
+    cursor: pointer;
+}
+.form-control::after {
+    content: '\25BC'; /* Down arrow symbol */
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+.custom-select {
+    background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='white' d='M2 0L0 2h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center/8px 10px;
+    background-color: black;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.table-wrapper {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+.table {
+    width: 100%;
+    margin-bottom: 0;
+    table-layout: fixed;
+}
+th, td {
+    position: relative;
+}
+.resizer {
+    width: 5px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: ew-resize;
+    user-select: none;
+}
+th .resizer {
+    background-color: white;
+}
