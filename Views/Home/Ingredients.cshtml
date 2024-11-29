@@ -1,5 +1,4 @@
-@model IEnumerable<LoginApp.Models.Ingredient>
-
+@model List<LoginApp.ViewModels.IngredientViewModel>
 @{
     ViewData["Title"] = "Ingredients";
 }
@@ -18,10 +17,10 @@
     <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2024.1.119/styles/kendo.default-v2.min.css" />
     <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2024.1.119/styles/kendo.common.min.css" />
 </head>
-<body>
-    <div class="container contentss" style="margin-right:370px">
+<body style="width:1120px">
+    <div class="container contentss" style="margin-right:490px">
         <h3 style="padding-top:150px">Add Ingredients</h3>
-        <form asp-controller="Ingredients" asp-action="AddIngredient" method="post" class="centered-form" style="margin-right:120px">
+        <form asp-controller="Ingredients" asp-action="AddIngredient" method="post" class="centered-form" style="margin-right:20px">
             <div class="form-group">
                 <label for="name">Ingredient # or Description</label>
                 <input type="text" class="form-control" id="name" name="Name" style="padding-right:280px;color:white;" >

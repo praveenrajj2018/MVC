@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using LoginApp.Data;
 using LoginApp.Services;
+using LoginApp.Interceptor;
+using LoginApp.Repositories; // Add this using directive for repository
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,13 +19,22 @@ try
     // Add services to the container.
     builder.Services.AddControllersWithViews();
 
+    // Configure Entity Framework to use SQL Server
     builder.Services.AddDbContext<ApplicationDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-    // Register the services
-    builder.Services.AddScoped<IngredientService>();
-    builder.Services.AddScoped<NutrientService>();
+    // Register the repositories and services
+    builder.Services.AddScoped<IIngredientRepository, IngredientRepository>(); // Register Ingredient repository
+    builder.Services.AddScoped<IngredientService>(); // Register IngredientService
+    builder.Services.AddScoped<INutrientRepository, NutrientRepository>(); // Register Nutrient repository
+    builder.Services.AddScoped<NutrientService>(); // Register NutrientService
+
+ builder.Services.AddScoped<IUserRepository, UserRepository>(); // Register User repository
     builder.Services.AddScoped<UserService>();
+    builder.Services.AddScoped<MeasurementService>(); // Register MeasurementService
+
+    // Register the ApiExceptionInterceptor
+    builder.Services.AddScoped<ApiExceptionInterceptor>();
 
     var app = builder.Build();
 

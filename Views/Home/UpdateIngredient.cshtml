@@ -1,4 +1,4 @@
-@model LoginApp.Models.Ingredient
+@model LoginApp.ViewModels.IngredientViewModel
 
 @{
     ViewData["Title"] = "Update Ingredient";
@@ -37,7 +37,7 @@
     <script src="https://kendo.cdn.telerik.com/2024.1.119/js/kendo.all.min.js"></script>
 </head>
 <body>
-    <div class="containers mt-6" style='margin-right:300px;width:720px' >
+    <div class="containers mt-6" style='margin-right:300px;width:920px'>
         <div class="btn-groupss" style="margin-bottom: 40px;margin-right:110px;margin-top:120px">
             <h2>General</h2>
             <a href="@Url.Action("Measurement", "Measurements")" class="btn btn-info">Measurement</a>
@@ -46,9 +46,10 @@
             <a href="" class="btn btn-primary">Purchase info</a>
             <a href="" class="btn btn-secondary">Attachments</a>
         </div>
-        <form asp-controller="Ingredients" asp-action="UpdateIngredient" method="post" class="centered-form" style="padding-left:20px">
+        <form asp-controller="Ingredients" asp-action="UpdateIngredient" method="post" class="centered-form" style="padding-left:30px,width:1120px">
             <div class="form-group">
                 <label for="name">Ingredient # or Description</label>
+                <input type="hidden" name="Id" value="@Model.Id" /> <!-- Hidden field for Id -->
                 <input type="text" class="form-control" id="name" name="Name" value="@Model.Name" required>
             </div>
             <div class="form-group">
@@ -126,4 +127,3 @@
     </script>
 </body>
 </html>
-

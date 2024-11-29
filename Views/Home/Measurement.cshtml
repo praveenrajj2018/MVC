@@ -1,4 +1,4 @@
-@model IEnumerable<LoginApp.Models.Measurement>
+@model IEnumerable<LoginApp.ViewModels.MeasurementViewModel>
 
 @{
     ViewData["Title"] = "Measurement";
@@ -58,38 +58,7 @@
         <button id="updateAllBtn" class="btn btn-primary update-button">Update</button>
     </div>
 
-    <!-- Add Measurement Modal -->
-    <div class="modal fade" id="addMeasurementModal" tabindex="-1" role="dialog" aria-labelledby="addMeasurementLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addMeasurementLabel">Measurement</h5>
-                </div>
-                <div class="modal-body">
-                    <form id="addMeasurementForm">
-                        <div class="form-group">
-                            <label for="measurement">Measurement</label>
-                            <input type="text" class="form-control" id="measurement" name="MeasurementName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="weight">Weight</label>
-                            <input type="number" class="form-control" id="weight" name="Weight" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="og_l">O/G/L</label>
-                            <input type="text" class="form-control" id="og_l" name="OG_L" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="source">Source</label>
-                            <input type="text" class="form-control" id="source" name="Source" required>
-                        </div>
-                        <button type="submit" class="btn btn-success">Add</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cancelBtn">Cancel</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Add Measurement Modal --> <div class="modal fade" id="addMeasurementModal" tabindex="-1" role="dialog" aria-labelledby="addMeasurementLabel" aria-hidden="true"> <div class="modal-dialog modal-dialog-centered" role="document"> <div class="modal-content"> <div class="modal-header"> <h5 class="modal-title" id="addMeasurementLabel">Measurement</h5> </div> <div class="modal-body"> <form id="addMeasurementForm"> <div class="form-group"> <label for="measurement">Measurement</label> <input type="text" class="form-control" id="measurement" name="MeasurementName" required> <span class="text-danger" id="measurementValidation"></span> </div> <div class="form-group"> <label for="weight">Weight</label> <input type="number" class="form-control" id="weight" name="Weight" required> <span class="text-danger" id="weightValidation"></span> </div> <div class="form-group"> <label for="og_l">O/G/L</label> <input type="text" class="form-control" id="og_l" name="OG_L" required> <span class="text-danger" id="ogLValidation"></span> </div> <div class="form-group"> <label for="source">Source</label> <input type="text" class="form-control" id="source" name="Source" required> <span class="text-danger" id="sourceValidation"></span> </div> <button type="submit" class="btn btn-success">Add</button> <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cancelBtn">Cancel</button> </form> </div> </div> </div> </div>
 
     <!-- Update/Delete Measurement Modal -->
     <div class="modal fade" id="updateMeasurementModal" tabindex="-1" role="dialog" aria-labelledby="updateMeasurementLabel" aria-hidden="true">

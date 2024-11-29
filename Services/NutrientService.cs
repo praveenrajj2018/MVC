@@ -1,45 +1,29 @@
-using LoginApp.Data;
+// NutrientService.cs
 using LoginApp.Models;
-using System.Threading.Tasks;
+using LoginApp.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 
 namespace LoginApp.Services
 {
     public class NutrientService
     {
-        private readonly ApplicationDbContext _context;
+        private readonly INutrientRepository _nutrientRepository;
 
-        public NutrientService(ApplicationDbContext context)
+        public NutrientService(INutrientRepository nutrientRepository)
         {
-            _context = context;
+            _nutrientRepository = nutrientRepository;
         }
 
         public async Task AddNutrientAsync(Nutrient nutrient)
         {
-            try
-            {
-                _context.Add(nutrient);
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                throw; // Rethrow the exception to be handled by the controller
-            }
+            await _nutrientRepository.AddNutrientAsync(nutrient);
         }
 
-        // New Map function
         public List<Nutrient> Map(Func<Nutrient, Nutrient> mapFunction)
         {
-            try
-            {
-                return _context.Nutrients.Select(mapFunction).ToList();
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
+            return _nutrientRepository.Map(mapFunction);
         }
     }
 }

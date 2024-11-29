@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LoginApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241121045412_AddIngredien")]
-    partial class AddIngredien
+    [Migration("20241128063452_AddIngredienk")]
+    partial class AddIngredienk
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -6,6 +6,7 @@ C:\Users\praveen.janarthanam\Desktop\MVC\LoginApp\obj\Debug\net8.0\LoginApp.cspr
 C:\Users\praveen.janarthanam\Desktop\MVC\LoginApp\obj\Debug\net8.0\LoginApp.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\praveen.janarthanam\Desktop\MVC\LoginApp\obj\Debug\net8.0\LoginApp.RazorAssemblyInfo.cache
 C:\Users\praveen.janarthanam\Desktop\MVC\LoginApp\obj\Debug\net8.0\LoginApp.RazorAssemblyInfo.cs
+C:\Users\praveen.janarthanam\Desktop\MVC\LoginApp\obj\Debug\net8.0\LoginApp.sourcelink.json
 C:\Users\praveen.janarthanam\Desktop\MVC\LoginApp\bin\Debug\net8.0\nlog.config
 C:\Users\praveen.janarthanam\Desktop\MVC\LoginApp\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\praveen.janarthanam\Desktop\MVC\LoginApp\bin\Debug\net8.0\appsettings.json

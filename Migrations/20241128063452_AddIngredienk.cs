@@ -5,7 +5,7 @@
 namespace LoginApp.Migrations
 {
     /// <inheritdoc />
-    public partial class AddIngredien : Migration
+    public partial class AddIngredienk : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -1,49 +1,29 @@
-using LoginApp.Data;
+// UserService.cs
 using LoginApp.Models;
-using System.Threading.Tasks;
-using Serilog;
+using LoginApp.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 
 namespace LoginApp.Services
 {
     public class UserService
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IUserRepository _userRepository;
 
-        public UserService(ApplicationDbContext context)
+        public UserService(IUserRepository userRepository)
         {
-            _context = context;
+            _userRepository = userRepository;
         }
 
         public async Task AddUserAsync(User user)
         {
-            try
-            {
-                _context.Users.Add(user);
-                await _context.SaveChangesAsync();
-                Log.Information($"User {user.Username} added to the database.");
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex, "An error occurred while adding the user to the database.");
-                throw; // Rethrow the exception to be handled by the controller
-            }
+            await _userRepository.AddUserAsync(user);
         }
 
-        // New Map function
         public List<User> Map(Func<User, User> mapFunction)
         {
-            try
-            {
-                return _context.Users.Select(mapFunction).ToList();
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex, "An error occurred while mapping users.");
-                throw;
-            }
+            return _userRepository.Map(mapFunction);
         }
     }
 }

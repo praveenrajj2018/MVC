@@ -1,5 +1,3 @@
-// measurement.js
-
 document.addEventListener('DOMContentLoaded', function() {
     var addMeasurementModal = new bootstrap.Modal(document.getElementById('addMeasurementModal'));
     var updateMeasurementModal = new bootstrap.Modal(document.getElementById('updateMeasurementModal'));
@@ -10,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
         addMeasurementModal.show();
     });
 
-    // Cancel button for Add Modal
     document.getElementById('cancelBtn').addEventListener('click', function() {
         addMeasurementModal.hide();
     });
@@ -36,12 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <td><a href="javascript:void(0)" class="measurement-link" data-id="${data.measurement.id}">${data.measurement.measurementName}</a></td>
                                 <td><input type="text" class="update-input" value="${data.measurement.weight}"></td>
                                 <td><input type="text" class="update-input" value="${data.measurement.oG_L}"></td>
-                                <td><input type="text" class="update-input" value="${data.measurement.source}"></td>
+                                                                <td><input type="text" class="update-input" value="${data.measurement.source}"></td>
                               </tr>`;
                 document.getElementById('measurementsTable').innerHTML += newRow;
                 addMeasurementModal.hide();
-                attachInputChangeHandler(); 
-                attachMeasurementLinkClickHandlers(); 
+                attachInputChangeHandler(); // Re-attach handlers for new elements
+                attachMeasurementLinkClickHandlers(); // Re-attach handlers for new elements
             } else {
                 alert(data.message);
             }
@@ -58,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-
     attachInputChangeHandler(); 
 
     function attachMeasurementLinkClickHandlers() {
@@ -136,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                // Remove the row from the table
                 var row = document.querySelector(`.measurement-link[data-id="${measurementId}"]`).closest('tr');
                 row.remove();
 

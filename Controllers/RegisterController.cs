@@ -4,7 +4,6 @@ using LoginApp.Services;
 using System.Threading.Tasks;
 using Serilog;
 using System;
-using System.Collections.Generic;
 
 public class RegisterController : Controller
 {
@@ -31,7 +30,7 @@ public class RegisterController : Controller
                 var user = new User
                 {
                     Username = model.Username,
-                    PasswordHash = model.Password
+                    PasswordHash = model.Password // Ideally, hash the password before saving
                 };
 
                 await _userService.AddUserAsync(user);
