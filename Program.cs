@@ -28,10 +28,13 @@ try
     builder.Services.AddScoped<IngredientService>(); // Register IngredientService
     builder.Services.AddScoped<INutrientRepository, NutrientRepository>(); // Register Nutrient repository
     builder.Services.AddScoped<NutrientService>(); // Register NutrientService
-
- builder.Services.AddScoped<IUserRepository, UserRepository>(); // Register User repository
+    builder.Services.AddScoped<IUserRepository, UserRepository>(); // Register User repository
     builder.Services.AddScoped<UserService>();
     builder.Services.AddScoped<MeasurementService>(); // Register MeasurementService
+
+    // Register AttachmentService and AttachmentRepository
+    builder.Services.AddScoped<IAttachmentService, AttachmentService>(); // Register Attachment service
+    builder.Services.AddScoped<IAttachmentRepository, AttachmentRepository>(); // Register Attachment repository
 
     // Register the ApiExceptionInterceptor
     builder.Services.AddScoped<ApiExceptionInterceptor>();
@@ -42,11 +45,12 @@ try
     if (!app.Environment.IsDevelopment())
     {
         app.UseExceptionHandler("/Home/Error");
+        app.UseStatusCodePagesWithReExecute("/Error/{0}");
         app.UseHsts();
     }
 
     app.UseHttpsRedirection();
-    app.UseStaticFiles();
+    app.UseStaticFiles(); // Ensure static files are served
 
     app.UseRouting();
 
@@ -55,6 +59,10 @@ try
     app.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    app.MapControllerRoute(
+        name: "attachments",
+        pattern: "{controller=Attachments}/{action=Attachment}/{id?}");
 
     app.Run();
 }

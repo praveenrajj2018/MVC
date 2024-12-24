@@ -1,8 +1,7 @@
-@model List<LoginApp.ViewModels.IngredientViewModel>
+
 @{
     ViewData["Title"] = "Ingredients";
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,18 +11,14 @@
     <title>@ViewData["Title"] - LoginApp</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/ingredients.css" asp-append-version="true" />
-
-    <!-- Kendo UI stylesheets -->
-    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2024.1.119/styles/kendo.default-v2.min.css" />
-    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2024.1.119/styles/kendo.common.min.css" />
 </head>
 <body style="width:1120px">
     <div class="container contentss" style="margin-right:490px">
         <h3 style="padding-top:150px">Add Ingredients</h3>
-        <form asp-controller="Ingredients" asp-action="AddIngredient" method="post" class="centered-form" style="margin-right:20px">
+        <form id="ingredient-form" asp-controller="Ingredients" asp-action="AddIngredient" method="post" class="centered-form" style="margin-right:20px">
             <div class="form-group">
                 <label for="name">Ingredient # or Description</label>
-                <input type="text" class="form-control" id="name" name="Name" style="padding-right:280px;color:white;" >
+                <input type="text" class="form-control" id="name" name="Name" style="padding-right:280px;color:white;">
             </div>
             <div class="form-group">
                 <label for="source">Source</label>
@@ -36,7 +31,7 @@
             </div>
             <div class="form-group">
                 <label for="classification">Classification</label>
-                <select class="form-control custom-select" id="classification" name="Classification" >
+                <select class="form-control custom-select" id="classification" name="Classification">
                     <option value="">Select Classification</option>
                     <option value="Chicken">Chicken</option>
                     <option value="Dairy Food">Dairy Food</option>
@@ -44,9 +39,10 @@
                     <option value="Dessert Food">Dessert Food</option>
                     <option value="Fat">Fat</option>
                 </select>
-            </div>
-            <button type="submit" class="btn btn-primary" style="background-color:green">Add</button>
+            </div><br/>
+            <button type="button" class="btn btn-primary" id="add-btn" style="background-color:green">Add</button>
             <button type="submit" formaction="@Url.Action("SearchIngredients", "Ingredients")" class="btn btn-secondary" style="background-color:blue">Search</button>
+            <button type="button" class="btn btn-secondary" style="background-color:red" id="reset-button">Reset</button>
         </form>
 
         @if (ViewBag.ErrorMessage != null)
@@ -66,7 +62,7 @@
                 <thead>
                     <tr>
                         <th style="width:5%"><input type="checkbox" id="select-all"></th>
-                        <th data-sortable="true">Ingredient Name<div class="resizer"></div></th>
+                        <th data-sortable="true" class="sortable">Ingredient Name<div class="resizer"></div></th>
                         <th>Source<div class="resizer"></div></th>
                         <th>Classification<div class="resizer"></div></th>
                     </tr>
@@ -75,7 +71,7 @@
                     @foreach (var ingredient in Model)
                     {
                         <tr class="clickable-row" data-id="@ingredient.Id" data-href="@Url.Action("UpdateIngredient", new { id = ingredient.Id })">
-                            <td ><input type="checkbox" class="row-checkbox" value="@ingredient.Id"></td>
+                            <td><input type="checkbox" class="row-checkbox" value="@ingredient.Id"></td>
                             <td>@ingredient.Name</td>
                             <td>@ingredient.Source</td>
                             <td>@ingredient.Classification</td>
@@ -86,35 +82,30 @@
         </div>
     </div>
 
-    <script src="https://kendo.cdn.telerik.com/2024.1.119/js/jquery.min.js"></script>
-    <script src="https://kendo.cdn.telerik.com/2024.1.119/js/kendo.all.min.js"></script>
-    <script src="~/js/ingredients.js" asp-append-version="true"></script>
+    <!-- Confirmation Modal for Adding Ingredient -->
+    <div id="addConfirmationModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addConfirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addConfirmationModalLabel">Confirm Addition</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to add this ingredient?</p>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-danger mr-2" id="cancelAddBtn" style="padding-left:50px;padding-right:50px;margin-right:40px">No</button>
+                        <button type="button" class="btn btn-success" id="confirmAddBtn"style="padding-left:50px;padding-right:50px;margin-right: 100px;">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
         $(document).ready(function () {
-            // Initialize Kendo DropDownList for Source
-            $("#source").kendoDropDownList({
-                dataTextField: "Text",
-                dataValueField: "Value",
-                dataSource: [
-                    { Value: "Local", Text: "Local" },
-                    { Value: "USDA", Text: "USDA" },
-                    { Value: "GSImport", Text: "GSImport" }
-                ]
-            });
-
-            // Initialize Kendo DropDownList for Classification
-            $("#classification").kendoDropDownList({
-                dataTextField: "Text",
-                dataValueField: "Value",
-                dataSource: [
-                    { Value: "Chicken", Text: "Chicken" },
-                    { Value: "Dairy Food", Text: "Dairy Food" },
-                    { Value: "Fast Food", Text: "Fast Food" },
-                    { Value: "Dessert Food", Text: "Dessert Food" },
-                    { Value: "Fat", Text: "Fat" }
-                ]
-            });
-
             // Select-all functionality for checkboxes
             $("#select-all").click(function () {
                 $(".row-checkbox").prop('checked', $(this).prop('checked'));
@@ -134,9 +125,123 @@
                 }
             }
 
+            // Prevent row click if checkbox is clicked
+            $(".row-checkbox").click(function (e) {
+                e.stopPropagation();
+                toggleActionButtons();
+            });
+
             // Row click functionality to navigate to update page
-            $(".clickable-row").click(function () {
-                window.location = $(this).data("href");
+            $(".clickable-row").click(function (e) {
+                if (!$(e.target).is(".row-checkbox")) {
+                    window.location = $(this).data("href");
+                }
+            });
+
+            // Reset button functionality
+            $("#reset-button").click(function () {
+                $("#ingredient-form")[0].reset();
+                $(".row-checkbox").prop('checked', false); // Uncheck all checkboxes
+                toggleActionButtons(); // Hide action buttons
+            });
+
+            // Open confirmation modal for add
+            $("#add-btn").click(function () {
+                $('#addConfirmationModal').modal('show');
+            });
+
+            // Confirm add action
+            $("#confirmAddBtn").click(function () {
+                $("#ingredient-form").submit();
+            });
+
+            // Close confirmation modal
+            $("#cancelAddBtn").click(function () {
+                $('#addConfirmationModal').modal('hide');
+            });
+            
+            // Close modal on 'x' button click
+            $(".close").click(function () {
+                $(this).closest('.modal').modal('hide');
+            });
+
+            // Open confirmation modal for delete
+            $("#delete-button").click(function () {
+                openConfirmationModal();
+            });
+
+            function openConfirmationModal() {
+                $('#confirmationModal').modal('show');
+            }
+
+            function closeConfirmationModal() {
+                $('#confirmationModal').modal('hide');
+            }
+
+            $("#confirmDeleteBtn").click(function () {
+                var selectedIds = [];
+                $(".row-checkbox:checked").each(function () {
+                    selectedIds.push(parseInt($(this).val())); // Ensure IDs are sent as integers
+                });
+
+                if (selectedIds.length > 0) {
+                    // Send the delete request to the server
+                    $.ajax({
+                        url: '@Url.Action("DeleteIngredients", "Ingredients")',
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify(selectedIds),
+                        success: function () {
+                            // Remove the deleted rows from the table
+                            selectedIds.forEach(function (id) {
+                                $("tr[data-id='" + id + "']").remove();
+                            });
+
+                            $(".action-buttons").hide();
+                            closeConfirmationModal();
+                        },
+                        error: function () {
+                            alert("An error occurred while deleting the ingredients. Please try again.");
+                        }
+                    });
+                }
+            });
+            $("#cancelDeleteBtn").click(closeConfirmationModal);
+            $(".close").click(closeConfirmationModal);
+
+            $(".resizer").mousedown(function (e) {
+                var th = $(this).parent();
+                var startOffset = th.width() - e.pageX;
+
+                               $(document).mousemove(function (e) {
+                    th.width(startOffset + e.pageX);
+                }).mouseup(function () {
+                    $(document).unbind('mousemove');
+                });
+            });
+
+            var sortOrder = 1;
+            $(".sortable").click(function() {
+                var rows = $(".table tbody tr").get();
+
+                rows.sort(function(a, b) {
+                    var A = $(a).children("td").eq(1).text().toUpperCase();
+                    var B = $(b).children("td").eq(1).text().toUpperCase();
+
+                    if (A < B) {
+                        return -1 * sortOrder;
+                    }
+                    if (A > B) {
+                        return 1 * sortOrder;
+                    }
+                    return 0;
+                });
+
+                $.each(rows, function(index, row) {
+                    $(".table tbody").append(row);
+                });
+
+                sortOrder *= -1; // Toggle sort order
             });
         });
     </script>

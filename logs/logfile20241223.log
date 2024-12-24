@@ -1,0 +1,474 @@
+2024-12-23 11:55:27.233 +05:30 [INF] User profile is available. Using 'C:\Users\praveen.janarthanam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-23 11:55:27.375 +05:30 [INF] Now listening on: http://localhost:5019
+2024-12-23 11:55:27.377 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-23 11:55:27.377 +05:30 [INF] Hosting environment: Development
+2024-12-23 11:55:27.377 +05:30 [INF] Content root path: C:\Users\praveen.janarthanam\Desktop\MVC\LoginApp
+2024-12-23 11:55:28.787 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/ - null null
+2024-12-23 11:55:28.819 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-12-23 11:55:28.852 +05:30 [INF] Executing endpoint 'LoginApp.Controllers.AttachmentsController.Attachment (LoginApp)'
+2024-12-23 11:55:28.903 +05:30 [INF] Route matched with {action = "Attachment", controller = "Attachments"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Attachment() on controller LoginApp.Controllers.AttachmentsController (LoginApp).
+2024-12-23 11:55:29.224 +05:30 [INF] Executing ViewResult, running view ~/Views/Home/Attachment.cshtml.
+2024-12-23 11:55:29.389 +05:30 [INF] Executed ViewResult - view ~/Views/Home/Attachment.cshtml executed in 166.5892ms.
+2024-12-23 11:55:29.401 +05:30 [INF] Executed action LoginApp.Controllers.AttachmentsController.Attachment (LoginApp) in 496.6043ms
+2024-12-23 11:55:29.402 +05:30 [INF] Executed endpoint 'LoginApp.Controllers.AttachmentsController.Attachment (LoginApp)'
+2024-12-23 11:55:29.412 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/ - 200 null text/html; charset=utf-8 627.4047ms
+2024-12-23 11:55:29.415 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2024-12-23 11:55:29.419 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - null null
+2024-12-23 11:55:29.421 +05:30 [INF] The file /css/site.css was not modified
+2024-12-23 11:55:29.421 +05:30 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2024-12-23 11:55:29.423 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - 304 null text/css 4.0382ms
+2024-12-23 11:55:29.423 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/lib/bootstrap/dist/css/bootstrap.min.css - 304 null text/css 7.5358ms
+2024-12-23 11:55:29.425 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/LoginApp.styles.css?v=UilBQYh_T4hyatYw8H1wE73oFYPoT0wUbZ5zQAwEWOc - null null
+2024-12-23 11:55:29.426 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/lib/jquery/dist/jquery.min.js - null null
+2024-12-23 11:55:29.426 +05:30 [INF] The file /LoginApp.styles.css was not modified
+2024-12-23 11:55:29.426 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2024-12-23 11:55:29.427 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/LoginApp.styles.css?v=UilBQYh_T4hyatYw8H1wE73oFYPoT0wUbZ5zQAwEWOc - 304 null text/css 1.5499ms
+2024-12-23 11:55:29.426 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:55:29.427 +05:30 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2024-12-23 11:55:29.427 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/lib/jquery/dist/jquery.min.js - 304 null text/javascript 1.2586ms
+2024-12-23 11:55:29.428 +05:30 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2024-12-23 11:55:29.428 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 304 null text/javascript 2.3288ms
+2024-12-23 11:55:29.430 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 3.64ms
+2024-12-23 11:55:29.434 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2024-12-23 11:55:29.434 +05:30 [INF] The file /js/site.js was not modified
+2024-12-23 11:55:29.435 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 304 null text/javascript 1.042ms
+2024-12-23 11:55:30.742 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/ - null null
+2024-12-23 11:55:30.742 +05:30 [INF] Executing endpoint 'LoginApp.Controllers.AttachmentsController.Attachment (LoginApp)'
+2024-12-23 11:55:30.742 +05:30 [INF] Route matched with {action = "Attachment", controller = "Attachments"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Attachment() on controller LoginApp.Controllers.AttachmentsController (LoginApp).
+2024-12-23 11:55:30.750 +05:30 [INF] Executing ViewResult, running view ~/Views/Home/Attachment.cshtml.
+2024-12-23 11:55:30.754 +05:30 [INF] Executed ViewResult - view ~/Views/Home/Attachment.cshtml executed in 4.955ms.
+2024-12-23 11:55:30.755 +05:30 [INF] Executed action LoginApp.Controllers.AttachmentsController.Attachment (LoginApp) in 12.1131ms
+2024-12-23 11:55:30.755 +05:30 [INF] Executed endpoint 'LoginApp.Controllers.AttachmentsController.Attachment (LoginApp)'
+2024-12-23 11:55:30.755 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/ - 200 null text/html; charset=utf-8 13.3352ms
+2024-12-23 11:55:30.781 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:55:30.782 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.527ms
+2024-12-23 11:55:36.311 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/register/register - null null
+2024-12-23 11:55:36.313 +05:30 [INF] Executing endpoint 'RegisterController.Register (LoginApp)'
+2024-12-23 11:55:36.314 +05:30 [INF] Route matched with {action = "Register", controller = "Register"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller RegisterController (LoginApp).
+2024-12-23 11:55:36.316 +05:30 [INF] Executing ViewResult, running view /Views/Home/Register.cshtml.
+2024-12-23 11:55:36.379 +05:30 [INF] Executed ViewResult - view /Views/Home/Register.cshtml executed in 64.5426ms.
+2024-12-23 11:55:36.380 +05:30 [INF] Executed action RegisterController.Register (LoginApp) in 65.3835ms
+2024-12-23 11:55:36.380 +05:30 [INF] Executed endpoint 'RegisterController.Register (LoginApp)'
+2024-12-23 11:55:36.380 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/register/register - 200 null text/html; charset=utf-8 68.5134ms
+2024-12-23 11:55:36.403 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/css/register.css?v=Zqmbyi8hyABzEW5RUoa4fYhaEalTpIhEgFMX--pw9Zs - null null
+2024-12-23 11:55:36.404 +05:30 [INF] The file /css/register.css was not modified
+2024-12-23 11:55:36.404 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/css/register.css?v=Zqmbyi8hyABzEW5RUoa4fYhaEalTpIhEgFMX--pw9Zs - 304 null text/css 0.7408ms
+2024-12-23 11:55:36.407 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/js/register.js?v=XoVIO8IeDzdvwVwxG7qSPccXSkoW8gRf7j_AM5b2uX4 - null null
+2024-12-23 11:55:36.407 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:55:36.408 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.311ms
+2024-12-23 11:55:36.408 +05:30 [INF] The file /js/register.js was not modified
+2024-12-23 11:55:36.408 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/js/register.js?v=XoVIO8IeDzdvwVwxG7qSPccXSkoW8gRf7j_AM5b2uX4 - 304 null text/javascript 0.7804ms
+2024-12-23 11:55:43.454 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5019/Register/Register - application/x-www-form-urlencoded 213
+2024-12-23 11:55:43.455 +05:30 [INF] Executing endpoint 'RegisterController.Register (LoginApp)'
+2024-12-23 11:55:43.463 +05:30 [INF] Route matched with {action = "Register", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(RegisterViewModel) on controller RegisterController (LoginApp).
+2024-12-23 11:55:44.353 +05:30 [INF] Executed DbCommand (44ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([PasswordHash], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-12-23 11:55:44.380 +05:30 [INF] User Ramesh added to the database.
+2024-12-23 11:55:44.381 +05:30 [INF] User Ramesh registered successfully.
+2024-12-23 11:55:44.386 +05:30 [INF] Executing RedirectResult, redirecting to /NextPage/NextPage.
+2024-12-23 11:55:44.386 +05:30 [INF] Executed action RegisterController.Register (LoginApp) in 922.6139ms
+2024-12-23 11:55:44.386 +05:30 [INF] Executed endpoint 'RegisterController.Register (LoginApp)'
+2024-12-23 11:55:44.390 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5019/Register/Register - 302 0 null 936.5664ms
+2024-12-23 11:55:44.391 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - null null
+2024-12-23 11:55:44.392 +05:30 [INF] Executing endpoint 'NextPageController.NextPage (LoginApp)'
+2024-12-23 11:55:44.392 +05:30 [INF] Route matched with {action = "NextPage", controller = "NextPage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NextPage() on controller NextPageController (LoginApp).
+2024-12-23 11:55:44.393 +05:30 [INF] Executing ViewResult, running view /Views/Home/NextPage.cshtml.
+2024-12-23 11:55:44.400 +05:30 [INF] Executed ViewResult - view /Views/Home/NextPage.cshtml executed in 7.0672ms.
+2024-12-23 11:55:44.400 +05:30 [INF] Executed action NextPageController.NextPage (LoginApp) in 7.4347ms
+2024-12-23 11:55:44.400 +05:30 [INF] Executed endpoint 'NextPageController.NextPage (LoginApp)'
+2024-12-23 11:55:44.400 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - 200 null text/html; charset=utf-8 9.09ms
+2024-12-23 11:55:44.421 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/css/nextpage.css?v=t4a3gjmZautKcCSXSbi2vt5IqJto5Tx81_Uo8IykoWo - null null
+2024-12-23 11:55:44.421 +05:30 [INF] The file /css/nextpage.css was not modified
+2024-12-23 11:55:44.421 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/css/nextpage.css?v=t4a3gjmZautKcCSXSbi2vt5IqJto5Tx81_Uo8IykoWo - 304 null text/css 0.5057ms
+2024-12-23 11:55:44.424 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:55:44.424 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.1617ms
+2024-12-23 11:55:44.424 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/js/nextpage.js?v=6xuJXl-nSQnytyViVZbq5-aV01SB_GRtNRCIykzOrpU - null null
+2024-12-23 11:55:44.425 +05:30 [INF] The file /js/nextpage.js was not modified
+2024-12-23 11:55:44.425 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/js/nextpage.js?v=6xuJXl-nSQnytyViVZbq5-aV01SB_GRtNRCIykzOrpU - 304 null text/javascript 0.3634ms
+2024-12-23 11:55:50.471 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - null null
+2024-12-23 11:55:50.471 +05:30 [INF] Executing endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-12-23 11:55:50.472 +05:30 [INF] Route matched with {action = "Ingredients", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Ingredients() on controller IngredientsController (LoginApp).
+2024-12-23 11:55:50.639 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+2024-12-23 11:55:50.649 +05:30 [INF] Executing ViewResult, running view /Views/Home/Ingredients.cshtml.
+2024-12-23 11:55:50.670 +05:30 [INF] Executed ViewResult - view /Views/Home/Ingredients.cshtml executed in 22.1656ms.
+2024-12-23 11:55:50.671 +05:30 [INF] Executed action IngredientsController.Ingredients (LoginApp) in 198.1279ms
+2024-12-23 11:55:50.671 +05:30 [INF] Executed endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-12-23 11:55:50.671 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - 200 null text/html; charset=utf-8 200.2594ms
+2024-12-23 11:55:50.685 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/css/ingredients.css?v=Ov3o_gnBa3490vrKZIdg5zJC93EwogX9oA8f-0EF8I4 - null null
+2024-12-23 11:55:50.685 +05:30 [INF] The file /css/ingredients.css was not modified
+2024-12-23 11:55:50.685 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/css/ingredients.css?v=Ov3o_gnBa3490vrKZIdg5zJC93EwogX9oA8f-0EF8I4 - 304 null text/css 0.3882ms
+2024-12-23 11:55:50.688 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:55:50.688 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.1573ms
+2024-12-23 11:56:00.978 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5019/Ingredients/AddIngredient - application/x-www-form-urlencoded 240
+2024-12-23 11:56:00.979 +05:30 [INF] Executing endpoint 'IngredientsController.AddIngredient (LoginApp)'
+2024-12-23 11:56:00.981 +05:30 [INF] Route matched with {action = "AddIngredient", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddIngredient(LoginApp.ViewModels.IngredientViewModel) on controller IngredientsController (LoginApp).
+2024-12-23 11:56:00.998 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Ingredients] ([Classification], [Name], [Source])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2024-12-23 11:56:01.002 +05:30 [INF] Executing RedirectResult, redirecting to /Ingredients/Ingredients.
+2024-12-23 11:56:01.002 +05:30 [INF] Executed action IngredientsController.AddIngredient (LoginApp) in 21.3425ms
+2024-12-23 11:56:01.002 +05:30 [INF] Executed endpoint 'IngredientsController.AddIngredient (LoginApp)'
+2024-12-23 11:56:01.003 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5019/Ingredients/AddIngredient - 302 0 null 24.5149ms
+2024-12-23 11:56:01.007 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - null null
+2024-12-23 11:56:01.007 +05:30 [INF] Executing endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-12-23 11:56:01.008 +05:30 [INF] Route matched with {action = "Ingredients", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Ingredients() on controller IngredientsController (LoginApp).
+2024-12-23 11:56:01.011 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+2024-12-23 11:56:01.012 +05:30 [INF] Executing ViewResult, running view /Views/Home/Ingredients.cshtml.
+2024-12-23 11:56:01.013 +05:30 [INF] Executed ViewResult - view /Views/Home/Ingredients.cshtml executed in 1.4373ms.
+2024-12-23 11:56:01.013 +05:30 [INF] Executed action IngredientsController.Ingredients (LoginApp) in 5.5399ms
+2024-12-23 11:56:01.014 +05:30 [INF] Executed endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-12-23 11:56:01.014 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - 200 null text/html; charset=utf-8 6.7332ms
+2024-12-23 11:56:01.036 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:56:01.036 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.3843ms
+2024-12-23 11:56:03.967 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/UpdateIngredient/12 - null null
+2024-12-23 11:56:03.968 +05:30 [INF] Executing endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-12-23 11:56:03.969 +05:30 [INF] Route matched with {action = "UpdateIngredient", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateIngredient(Int32) on controller IngredientsController (LoginApp).
+2024-12-23 11:56:04.026 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+WHERE [i].[Id] = @__id_0
+2024-12-23 11:56:04.027 +05:30 [INF] Executing ViewResult, running view /Views/Home/UpdateIngredient.cshtml.
+2024-12-23 11:56:04.037 +05:30 [INF] Executed ViewResult - view /Views/Home/UpdateIngredient.cshtml executed in 10.2102ms.
+2024-12-23 11:56:04.037 +05:30 [INF] Executed action IngredientsController.UpdateIngredient (LoginApp) in 68.0507ms
+2024-12-23 11:56:04.037 +05:30 [INF] Executed endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-12-23 11:56:04.038 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/UpdateIngredient/12 - 200 null text/html; charset=utf-8 70.1341ms
+2024-12-23 11:56:04.058 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/css/updateingredient.css?v=ODKxcBT-PLK_Os0GypqmU4MQVLJIbnJAySr8e4ZZ8s8 - null null
+2024-12-23 11:56:04.058 +05:30 [INF] The file /css/updateingredient.css was not modified
+2024-12-23 11:56:04.058 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/css/updateingredient.css?v=ODKxcBT-PLK_Os0GypqmU4MQVLJIbnJAySr8e4ZZ8s8 - 304 null text/css 0.5472ms
+2024-12-23 11:56:04.061 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:56:04.061 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.1264ms
+2024-12-23 11:56:15.366 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5019/Ingredients/UpdateIngredient/12 - application/x-www-form-urlencoded 242
+2024-12-23 11:56:15.366 +05:30 [INF] Executing endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-12-23 11:56:15.367 +05:30 [INF] Route matched with {action = "UpdateIngredient", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateIngredient(LoginApp.ViewModels.IngredientViewModel) on controller IngredientsController (LoginApp).
+2024-12-23 11:56:15.372 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__ingredient_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+WHERE [i].[Id] = @__ingredient_Id_0
+2024-12-23 11:56:15.380 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Ingredients] SET [Classification] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2024-12-23 11:56:15.381 +05:30 [INF] Executing RedirectResult, redirecting to /Ingredients/Ingredients.
+2024-12-23 11:56:15.381 +05:30 [INF] Executed action IngredientsController.UpdateIngredient (LoginApp) in 13.7479ms
+2024-12-23 11:56:15.381 +05:30 [INF] Executed endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-12-23 11:56:15.381 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5019/Ingredients/UpdateIngredient/12 - 302 0 null 15.2113ms
+2024-12-23 11:56:15.389 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - null null
+2024-12-23 11:56:15.389 +05:30 [INF] Executing endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-12-23 11:56:15.389 +05:30 [INF] Route matched with {action = "Ingredients", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Ingredients() on controller IngredientsController (LoginApp).
+2024-12-23 11:56:15.391 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+2024-12-23 11:56:15.391 +05:30 [INF] Executing ViewResult, running view /Views/Home/Ingredients.cshtml.
+2024-12-23 11:56:15.392 +05:30 [INF] Executed ViewResult - view /Views/Home/Ingredients.cshtml executed in 0.6935ms.
+2024-12-23 11:56:15.392 +05:30 [INF] Executed action IngredientsController.Ingredients (LoginApp) in 3.0026ms
+2024-12-23 11:56:15.392 +05:30 [INF] Executed endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-12-23 11:56:15.392 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - 200 null text/html; charset=utf-8 3.5713ms
+2024-12-23 11:56:15.422 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:56:15.422 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.1726ms
+2024-12-23 11:56:34.686 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/UpdateIngredient/12 - null null
+2024-12-23 11:56:34.687 +05:30 [INF] Executing endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-12-23 11:56:34.687 +05:30 [INF] Route matched with {action = "UpdateIngredient", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateIngredient(Int32) on controller IngredientsController (LoginApp).
+2024-12-23 11:56:34.705 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+WHERE [i].[Id] = @__id_0
+2024-12-23 11:56:34.706 +05:30 [INF] Executing ViewResult, running view /Views/Home/UpdateIngredient.cshtml.
+2024-12-23 11:56:34.708 +05:30 [INF] Executed ViewResult - view /Views/Home/UpdateIngredient.cshtml executed in 2.101ms.
+2024-12-23 11:56:34.708 +05:30 [INF] Executed action IngredientsController.UpdateIngredient (LoginApp) in 20.7322ms
+2024-12-23 11:56:34.708 +05:30 [INF] Executed endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-12-23 11:56:34.708 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/UpdateIngredient/12 - 200 null text/html; charset=utf-8 22.2003ms
+2024-12-23 11:56:34.730 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:56:34.731 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.19ms
+2024-12-23 11:56:36.044 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Create/Create - null null
+2024-12-23 11:56:36.045 +05:30 [INF] Executing endpoint 'CreateController.Create (LoginApp)'
+2024-12-23 11:56:36.045 +05:30 [INF] Route matched with {action = "Create", controller = "Create"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller CreateController (LoginApp).
+2024-12-23 11:56:36.046 +05:30 [INF] Executing ViewResult, running view /Views/Home/Create.cshtml.
+2024-12-23 11:56:36.078 +05:30 [INF] Executed ViewResult - view /Views/Home/Create.cshtml executed in 31.5272ms.
+2024-12-23 11:56:36.078 +05:30 [INF] Executed action CreateController.Create (LoginApp) in 32.1455ms
+2024-12-23 11:56:36.078 +05:30 [INF] Executed endpoint 'CreateController.Create (LoginApp)'
+2024-12-23 11:56:36.078 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Create/Create - 200 null text/html; charset=utf-8 33.5705ms
+2024-12-23 11:56:36.103 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2024-12-23 11:56:36.104 +05:30 [INF] The file /lib/jquery-validation/dist/jquery.validate.min.js was not modified
+2024-12-23 11:56:36.104 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/lib/jquery-validation/dist/jquery.validate.min.js - 304 null text/javascript 0.5612ms
+2024-12-23 11:56:36.108 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:56:36.108 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2024-12-23 11:56:36.108 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.192ms
+2024-12-23 11:56:36.108 +05:30 [INF] The file /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js was not modified
+2024-12-23 11:56:36.108 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 304 null text/javascript 0.404ms
+2024-12-23 11:56:39.517 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5019/Create/Create - application/x-www-form-urlencoded 428
+2024-12-23 11:56:39.518 +05:30 [INF] Executing endpoint 'CreateController.Create (LoginApp)'
+2024-12-23 11:56:39.521 +05:30 [INF] Route matched with {action = "Create", controller = "Create"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(LoginApp.ViewModels.NutrientViewModel) on controller CreateController (LoginApp).
+2024-12-23 11:56:39.550 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Single), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Single), @p5='?' (DbType = Int32), @p6='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Nutrients] ([BaseWeight], [Calories], [Carbohydrate], [Cholesterol], [SaturatedFat], [Sodium], [TotalFat])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2024-12-23 11:56:39.555 +05:30 [INF] Executing RedirectResult, redirecting to /NextPage/NextPage.
+2024-12-23 11:56:39.555 +05:30 [INF] Executed action CreateController.Create (LoginApp) in 33.5302ms
+2024-12-23 11:56:39.555 +05:30 [INF] Executed endpoint 'CreateController.Create (LoginApp)'
+2024-12-23 11:56:39.556 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5019/Create/Create - 302 0 null 38.5784ms
+2024-12-23 11:56:39.561 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - null null
+2024-12-23 11:56:39.561 +05:30 [INF] Executing endpoint 'NextPageController.NextPage (LoginApp)'
+2024-12-23 11:56:39.561 +05:30 [INF] Route matched with {action = "NextPage", controller = "NextPage"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NextPage() on controller NextPageController (LoginApp).
+2024-12-23 11:56:39.561 +05:30 [INF] Executing ViewResult, running view /Views/Home/NextPage.cshtml.
+2024-12-23 11:56:39.562 +05:30 [INF] Executed ViewResult - view /Views/Home/NextPage.cshtml executed in 0.8191ms.
+2024-12-23 11:56:39.562 +05:30 [INF] Executed action NextPageController.NextPage (LoginApp) in 0.9198ms
+2024-12-23 11:56:39.562 +05:30 [INF] Executed endpoint 'NextPageController.NextPage (LoginApp)'
+2024-12-23 11:56:39.562 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/NextPage/NextPage - 200 null text/html; charset=utf-8 1.2578ms
+2024-12-23 11:56:39.592 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:56:39.593 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.31ms
+2024-12-23 11:56:41.135 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - null null
+2024-12-23 11:56:41.135 +05:30 [INF] Executing endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-12-23 11:56:41.136 +05:30 [INF] Route matched with {action = "Ingredients", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Ingredients() on controller IngredientsController (LoginApp).
+2024-12-23 11:56:41.137 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+2024-12-23 11:56:41.137 +05:30 [INF] Executing ViewResult, running view /Views/Home/Ingredients.cshtml.
+2024-12-23 11:56:41.138 +05:30 [INF] Executed ViewResult - view /Views/Home/Ingredients.cshtml executed in 0.6741ms.
+2024-12-23 11:56:41.138 +05:30 [INF] Executed action IngredientsController.Ingredients (LoginApp) in 2.4123ms
+2024-12-23 11:56:41.138 +05:30 [INF] Executed endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-12-23 11:56:41.138 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - 200 null text/html; charset=utf-8 2.8675ms
+2024-12-23 11:56:41.154 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:56:41.154 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.1926ms
+2024-12-23 11:57:07.907 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - null null
+2024-12-23 11:57:07.907 +05:30 [INF] Executing endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-12-23 11:57:07.907 +05:30 [INF] Route matched with {action = "Ingredients", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Ingredients() on controller IngredientsController (LoginApp).
+2024-12-23 11:57:07.908 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+2024-12-23 11:57:07.909 +05:30 [INF] Executing ViewResult, running view /Views/Home/Ingredients.cshtml.
+2024-12-23 11:57:07.910 +05:30 [INF] Executed ViewResult - view /Views/Home/Ingredients.cshtml executed in 1.0171ms.
+2024-12-23 11:57:07.910 +05:30 [INF] Executed action IngredientsController.Ingredients (LoginApp) in 2.5346ms
+2024-12-23 11:57:07.910 +05:30 [INF] Executed endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-12-23 11:57:07.910 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - 200 null text/html; charset=utf-8 3.2207ms
+2024-12-23 11:57:07.937 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:57:07.937 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.1465ms
+2024-12-23 11:57:10.374 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/UpdateIngredient/12 - null null
+2024-12-23 11:57:10.374 +05:30 [INF] Executing endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-12-23 11:57:10.375 +05:30 [INF] Route matched with {action = "UpdateIngredient", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateIngredient(Int32) on controller IngredientsController (LoginApp).
+2024-12-23 11:57:10.378 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+WHERE [i].[Id] = @__id_0
+2024-12-23 11:57:10.379 +05:30 [INF] Executing ViewResult, running view /Views/Home/UpdateIngredient.cshtml.
+2024-12-23 11:57:10.380 +05:30 [INF] Executed ViewResult - view /Views/Home/UpdateIngredient.cshtml executed in 1.4828ms.
+2024-12-23 11:57:10.380 +05:30 [INF] Executed action IngredientsController.UpdateIngredient (LoginApp) in 5.3217ms
+2024-12-23 11:57:10.380 +05:30 [INF] Executed endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-12-23 11:57:10.380 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/UpdateIngredient/12 - 200 null text/html; charset=utf-8 6.8377ms
+2024-12-23 11:57:10.403 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:57:10.403 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.219ms
+2024-12-23 11:57:12.342 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Measurements/Measurement - null null
+2024-12-23 11:57:12.343 +05:30 [INF] Executing endpoint 'LoginApp.Controllers.MeasurementsController.Measurement (LoginApp)'
+2024-12-23 11:57:12.344 +05:30 [INF] Route matched with {action = "Measurement", controller = "Measurements"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Measurement() on controller LoginApp.Controllers.MeasurementsController (LoginApp).
+2024-12-23 11:57:12.350 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[MeasurementName], [m].[OG_L], [m].[Source], [m].[Weight]
+FROM [Measurements] AS [m]
+2024-12-23 11:57:12.357 +05:30 [INF] Executing ViewResult, running view ~/Views/Home/Measurement.cshtml.
+2024-12-23 11:57:12.364 +05:30 [INF] Executed ViewResult - view ~/Views/Home/Measurement.cshtml executed in 6.7924ms.
+2024-12-23 11:57:12.364 +05:30 [INF] Executed action LoginApp.Controllers.MeasurementsController.Measurement (LoginApp) in 20.1883ms
+2024-12-23 11:57:12.364 +05:30 [INF] Executed endpoint 'LoginApp.Controllers.MeasurementsController.Measurement (LoginApp)'
+2024-12-23 11:57:12.364 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Measurements/Measurement - 200 null text/html; charset=utf-8 21.6664ms
+2024-12-23 11:57:12.391 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:57:12.391 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.1811ms
+2024-12-23 11:57:17.894 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5019/Measurements/AddMeasurement - application/json 65
+2024-12-23 11:57:17.895 +05:30 [INF] Executing endpoint 'LoginApp.Controllers.MeasurementsController.AddMeasurement (LoginApp)'
+2024-12-23 11:57:17.897 +05:30 [INF] Route matched with {action = "AddMeasurement", controller = "Measurements"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddMeasurement(LoginApp.ViewModels.MeasurementViewModel) on controller LoginApp.Controllers.MeasurementsController (LoginApp).
+2024-12-23 11:57:17.923 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Measurements] ([MeasurementName], [OG_L], [Source], [Weight])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-12-23 11:57:17.924 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType1`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[LoginApp.Models.Measurement, LoginApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-23 11:57:17.931 +05:30 [INF] Executed action LoginApp.Controllers.MeasurementsController.AddMeasurement (LoginApp) in 34.2485ms
+2024-12-23 11:57:17.931 +05:30 [INF] Executed endpoint 'LoginApp.Controllers.MeasurementsController.AddMeasurement (LoginApp)'
+2024-12-23 11:57:17.931 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5019/Measurements/AddMeasurement - 200 null application/json; charset=utf-8 37.752ms
+2024-12-23 11:57:20.504 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Measurements/GetMeasurement/2 - null null
+2024-12-23 11:57:20.504 +05:30 [INF] Executing endpoint 'LoginApp.Controllers.MeasurementsController.GetMeasurement (LoginApp)'
+2024-12-23 11:57:20.505 +05:30 [INF] Route matched with {action = "GetMeasurement", controller = "Measurements"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetMeasurement(Int32) on controller LoginApp.Controllers.MeasurementsController (LoginApp).
+2024-12-23 11:57:20.525 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[MeasurementName], [m].[OG_L], [m].[Source], [m].[Weight]
+FROM [Measurements] AS [m]
+WHERE [m].[Id] = @__p_0
+2024-12-23 11:57:20.525 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType1`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[LoginApp.ViewModels.MeasurementViewModel, LoginApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-23 11:57:20.528 +05:30 [INF] Executed action LoginApp.Controllers.MeasurementsController.GetMeasurement (LoginApp) in 22.1128ms
+2024-12-23 11:57:20.528 +05:30 [INF] Executed endpoint 'LoginApp.Controllers.MeasurementsController.GetMeasurement (LoginApp)'
+2024-12-23 11:57:20.528 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Measurements/GetMeasurement/2 - 200 null application/json; charset=utf-8 23.4495ms
+2024-12-23 11:57:24.410 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5019/Measurements/UpdateMeasurement - application/json 74
+2024-12-23 11:57:24.410 +05:30 [INF] Executing endpoint 'LoginApp.Controllers.MeasurementsController.UpdateMeasurement (LoginApp)'
+2024-12-23 11:57:24.411 +05:30 [INF] Route matched with {action = "UpdateMeasurement", controller = "Measurements"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateMeasurement(LoginApp.ViewModels.MeasurementViewModel) on controller LoginApp.Controllers.MeasurementsController (LoginApp).
+2024-12-23 11:57:24.416 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Measurements] SET [MeasurementName] = @p0, [OG_L] = @p1, [Source] = @p2, [Weight] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2024-12-23 11:57:24.416 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType1`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[LoginApp.Models.Measurement, LoginApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-23 11:57:24.416 +05:30 [INF] Executed action LoginApp.Controllers.MeasurementsController.UpdateMeasurement (LoginApp) in 5.2773ms
+2024-12-23 11:57:24.416 +05:30 [INF] Executed endpoint 'LoginApp.Controllers.MeasurementsController.UpdateMeasurement (LoginApp)'
+2024-12-23 11:57:24.417 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5019/Measurements/UpdateMeasurement - 200 null application/json; charset=utf-8 6.6752ms
+2024-12-23 11:57:30.577 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5019/Measurements/UpdateAllMeasurements - application/json 151
+2024-12-23 11:57:30.578 +05:30 [INF] Executing endpoint 'LoginApp.Controllers.MeasurementsController.UpdateAllMeasurements (LoginApp)'
+2024-12-23 11:57:30.579 +05:30 [INF] Route matched with {action = "UpdateAllMeasurements", controller = "Measurements"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateAllMeasurements(System.Collections.Generic.List`1[LoginApp.ViewModels.MeasurementViewModel]) on controller LoginApp.Controllers.MeasurementsController (LoginApp).
+2024-12-23 11:57:30.592 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Double), @p9='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Measurements] SET [MeasurementName] = @p0, [OG_L] = @p1, [Source] = @p2, [Weight] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+UPDATE [Measurements] SET [MeasurementName] = @p5, [OG_L] = @p6, [Source] = @p7, [Weight] = @p8
+OUTPUT 1
+WHERE [Id] = @p9;
+2024-12-23 11:57:30.601 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-23 11:57:30.602 +05:30 [INF] Executed action LoginApp.Controllers.MeasurementsController.UpdateAllMeasurements (LoginApp) in 23.7987ms
+2024-12-23 11:57:30.602 +05:30 [INF] Executed endpoint 'LoginApp.Controllers.MeasurementsController.UpdateAllMeasurements (LoginApp)'
+2024-12-23 11:57:30.603 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5019/Measurements/UpdateAllMeasurements - 200 null application/json; charset=utf-8 25.3702ms
+2024-12-23 11:57:33.940 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Measurements/GetMeasurement/2 - null null
+2024-12-23 11:57:33.940 +05:30 [INF] Executing endpoint 'LoginApp.Controllers.MeasurementsController.GetMeasurement (LoginApp)'
+2024-12-23 11:57:33.940 +05:30 [INF] Route matched with {action = "GetMeasurement", controller = "Measurements"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetMeasurement(Int32) on controller LoginApp.Controllers.MeasurementsController (LoginApp).
+2024-12-23 11:57:33.943 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[MeasurementName], [m].[OG_L], [m].[Source], [m].[Weight]
+FROM [Measurements] AS [m]
+WHERE [m].[Id] = @__p_0
+2024-12-23 11:57:33.943 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType1`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[LoginApp.ViewModels.MeasurementViewModel, LoginApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-23 11:57:33.944 +05:30 [INF] Executed action LoginApp.Controllers.MeasurementsController.GetMeasurement (LoginApp) in 3.3776ms
+2024-12-23 11:57:33.944 +05:30 [INF] Executed endpoint 'LoginApp.Controllers.MeasurementsController.GetMeasurement (LoginApp)'
+2024-12-23 11:57:33.944 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Measurements/GetMeasurement/2 - 200 null application/json; charset=utf-8 3.8598ms
+2024-12-23 11:57:35.633 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5019/Measurements/DeleteMeasurement/2 - null null
+2024-12-23 11:57:35.633 +05:30 [INF] Executing endpoint 'LoginApp.Controllers.MeasurementsController.DeleteMeasurement (LoginApp)'
+2024-12-23 11:57:35.634 +05:30 [INF] Route matched with {action = "DeleteMeasurement", controller = "Measurements"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteMeasurement(Int32) on controller LoginApp.Controllers.MeasurementsController (LoginApp).
+2024-12-23 11:57:35.637 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[MeasurementName], [m].[OG_L], [m].[Source], [m].[Weight]
+FROM [Measurements] AS [m]
+WHERE [m].[Id] = @__p_0
+2024-12-23 11:57:35.648 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Measurements]
+OUTPUT 1
+WHERE [Id] = @p0;
+2024-12-23 11:57:35.650 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-23 11:57:35.650 +05:30 [INF] Executed action LoginApp.Controllers.MeasurementsController.DeleteMeasurement (LoginApp) in 16.1867ms
+2024-12-23 11:57:35.650 +05:30 [INF] Executed endpoint 'LoginApp.Controllers.MeasurementsController.DeleteMeasurement (LoginApp)'
+2024-12-23 11:57:35.651 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5019/Measurements/DeleteMeasurement/2 - 200 null application/json; charset=utf-8 17.434ms
+2024-12-23 11:57:38.859 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - null null
+2024-12-23 11:57:38.859 +05:30 [INF] Executing endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-12-23 11:57:38.859 +05:30 [INF] Route matched with {action = "Ingredients", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Ingredients() on controller IngredientsController (LoginApp).
+2024-12-23 11:57:38.862 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+2024-12-23 11:57:38.862 +05:30 [INF] Executing ViewResult, running view /Views/Home/Ingredients.cshtml.
+2024-12-23 11:57:38.862 +05:30 [INF] Executed ViewResult - view /Views/Home/Ingredients.cshtml executed in 0.6368ms.
+2024-12-23 11:57:38.862 +05:30 [INF] Executed action IngredientsController.Ingredients (LoginApp) in 3.0411ms
+2024-12-23 11:57:38.863 +05:30 [INF] Executed endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-12-23 11:57:38.863 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - 200 null text/html; charset=utf-8 3.5643ms
+2024-12-23 11:57:38.881 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:57:38.881 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.16ms
+2024-12-23 11:57:40.524 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/UpdateIngredient/1 - null null
+2024-12-23 11:57:40.524 +05:30 [INF] Executing endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-12-23 11:57:40.524 +05:30 [INF] Route matched with {action = "UpdateIngredient", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateIngredient(Int32) on controller IngredientsController (LoginApp).
+2024-12-23 11:57:40.526 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+WHERE [i].[Id] = @__id_0
+2024-12-23 11:57:40.526 +05:30 [INF] Executing ViewResult, running view /Views/Home/UpdateIngredient.cshtml.
+2024-12-23 11:57:40.527 +05:30 [INF] Executed ViewResult - view /Views/Home/UpdateIngredient.cshtml executed in 0.9415ms.
+2024-12-23 11:57:40.527 +05:30 [INF] Executed action IngredientsController.UpdateIngredient (LoginApp) in 3.1703ms
+2024-12-23 11:57:40.527 +05:30 [INF] Executed endpoint 'IngredientsController.UpdateIngredient (LoginApp)'
+2024-12-23 11:57:40.527 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/UpdateIngredient/1 - 200 null text/html; charset=utf-8 3.6113ms
+2024-12-23 11:57:40.556 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:57:40.556 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.2361ms
+2024-12-23 11:57:41.738 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Attachments/Attachment - null null
+2024-12-23 11:57:41.739 +05:30 [INF] Executing endpoint 'LoginApp.Controllers.AttachmentsController.Attachment (LoginApp)'
+2024-12-23 11:57:41.739 +05:30 [INF] Route matched with {action = "Attachment", controller = "Attachments"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Attachment() on controller LoginApp.Controllers.AttachmentsController (LoginApp).
+2024-12-23 11:57:41.741 +05:30 [INF] Executing ViewResult, running view ~/Views/Home/Attachment.cshtml.
+2024-12-23 11:57:41.743 +05:30 [INF] Executed ViewResult - view ~/Views/Home/Attachment.cshtml executed in 2.0289ms.
+2024-12-23 11:57:41.743 +05:30 [INF] Executed action LoginApp.Controllers.AttachmentsController.Attachment (LoginApp) in 3.877ms
+2024-12-23 11:57:41.743 +05:30 [INF] Executed endpoint 'LoginApp.Controllers.AttachmentsController.Attachment (LoginApp)'
+2024-12-23 11:57:41.743 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Attachments/Attachment - 200 null text/html; charset=utf-8 4.9578ms
+2024-12-23 11:57:41.772 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:57:41.772 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.2285ms
+2024-12-23 11:57:52.297 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5019/Attachments/UploadImage - multipart/form-data; boundary=----WebKitFormBoundaryby4MiBOVmJwrITDl 663495
+2024-12-23 11:57:52.299 +05:30 [INF] Executing endpoint 'LoginApp.Controllers.AttachmentsController.UploadImage (LoginApp)'
+2024-12-23 11:57:52.303 +05:30 [INF] Route matched with {action = "UploadImage", controller = "Attachments"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadImage(LoginApp.ViewModels.AttachmentViewModel) on controller LoginApp.Controllers.AttachmentsController (LoginApp).
+2024-12-23 11:57:53.277 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Attachments] ([ImagePath])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-12-23 11:57:53.278 +05:30 [INF] Executing ViewResult, running view ~/Views/Home/Attachment.cshtml.
+2024-12-23 11:57:53.282 +05:30 [INF] Executed ViewResult - view ~/Views/Home/Attachment.cshtml executed in 3.4771ms.
+2024-12-23 11:57:53.282 +05:30 [INF] Executed action LoginApp.Controllers.AttachmentsController.UploadImage (LoginApp) in 979.2854ms
+2024-12-23 11:57:53.282 +05:30 [INF] Executed endpoint 'LoginApp.Controllers.AttachmentsController.UploadImage (LoginApp)'
+2024-12-23 11:57:53.284 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5019/Attachments/UploadImage - 200 null text/html; charset=utf-8 986.4078ms
+2024-12-23 11:57:53.306 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/uploads/pexels-brunoscramgnon-1337825.jpg - null null
+2024-12-23 11:57:53.309 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:57:53.309 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.1918ms
+2024-12-23 11:57:53.323 +05:30 [INF] Sending file. Request path: '/uploads/pexels-brunoscramgnon-1337825.jpg'. Physical path: 'C:\Users\praveen.janarthanam\Desktop\MVC\LoginApp\wwwroot\uploads\pexels-brunoscramgnon-1337825.jpg'
+2024-12-23 11:57:53.323 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/uploads/pexels-brunoscramgnon-1337825.jpg - 200 663015 image/jpeg 17.0018ms
+2024-12-23 11:58:05.321 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5019/Attachments/DeleteImage - application/x-www-form-urlencoded 187
+2024-12-23 11:58:05.321 +05:30 [INF] Executing endpoint 'LoginApp.Controllers.AttachmentsController.DeleteImage (LoginApp)'
+2024-12-23 11:58:05.324 +05:30 [INF] Route matched with {action = "DeleteImage", controller = "Attachments"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteImage(Int32) on controller LoginApp.Controllers.AttachmentsController (LoginApp).
+2024-12-23 11:58:05.338 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ImagePath]
+FROM [Attachments] AS [a]
+WHERE [a].[Id] = @__p_0
+2024-12-23 11:58:05.340 +05:30 [INF] Executing RedirectResult, redirecting to /Attachments/Attachment.
+2024-12-23 11:58:05.340 +05:30 [INF] Executed action LoginApp.Controllers.AttachmentsController.DeleteImage (LoginApp) in 16.3057ms
+2024-12-23 11:58:05.340 +05:30 [INF] Executed endpoint 'LoginApp.Controllers.AttachmentsController.DeleteImage (LoginApp)'
+2024-12-23 11:58:05.340 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5019/Attachments/DeleteImage - 302 0 null 19.2095ms
+2024-12-23 11:58:05.344 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Attachments/Attachment - null null
+2024-12-23 11:58:05.344 +05:30 [INF] Executing endpoint 'LoginApp.Controllers.AttachmentsController.Attachment (LoginApp)'
+2024-12-23 11:58:05.344 +05:30 [INF] Route matched with {action = "Attachment", controller = "Attachments"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Attachment() on controller LoginApp.Controllers.AttachmentsController (LoginApp).
+2024-12-23 11:58:05.344 +05:30 [INF] Executing ViewResult, running view ~/Views/Home/Attachment.cshtml.
+2024-12-23 11:58:05.345 +05:30 [INF] Executed ViewResult - view ~/Views/Home/Attachment.cshtml executed in 0.6769ms.
+2024-12-23 11:58:05.345 +05:30 [INF] Executed action LoginApp.Controllers.AttachmentsController.Attachment (LoginApp) in 1.0105ms
+2024-12-23 11:58:05.345 +05:30 [INF] Executed endpoint 'LoginApp.Controllers.AttachmentsController.Attachment (LoginApp)'
+2024-12-23 11:58:05.345 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Attachments/Attachment - 200 null text/html; charset=utf-8 1.4355ms
+2024-12-23 11:58:05.370 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 11:58:05.370 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.1419ms
+2024-12-23 12:13:58.372 +05:30 [INF] Application is shutting down...
+2024-12-23 12:56:06.137 +05:30 [INF] User profile is available. Using 'C:\Users\praveen.janarthanam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-23 12:56:06.436 +05:30 [INF] Now listening on: http://localhost:5019
+2024-12-23 12:56:06.438 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-23 12:56:06.438 +05:30 [INF] Hosting environment: Development
+2024-12-23 12:56:06.438 +05:30 [INF] Content root path: C:\Users\praveen.janarthanam\Desktop\MVC\LoginApp
+2024-12-23 12:56:07.596 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/ - null null
+2024-12-23 12:56:07.611 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-12-23 12:56:07.645 +05:30 [INF] Executing endpoint 'LoginApp.Controllers.AttachmentsController.Attachment (LoginApp)'
+2024-12-23 12:56:07.696 +05:30 [INF] Route matched with {action = "Attachment", controller = "Attachments"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Attachment() on controller LoginApp.Controllers.AttachmentsController (LoginApp).
+2024-12-23 12:56:07.954 +05:30 [INF] Executing ViewResult, running view ~/Views/Home/Attachment.cshtml.
+2024-12-23 12:56:08.074 +05:30 [INF] Executed ViewResult - view ~/Views/Home/Attachment.cshtml executed in 123.9701ms.
+2024-12-23 12:56:08.079 +05:30 [INF] Executed action LoginApp.Controllers.AttachmentsController.Attachment (LoginApp) in 382.4206ms
+2024-12-23 12:56:08.080 +05:30 [INF] Executed endpoint 'LoginApp.Controllers.AttachmentsController.Attachment (LoginApp)'
+2024-12-23 12:56:08.084 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/ - 200 null text/html; charset=utf-8 490.0456ms
+2024-12-23 12:56:08.110 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 12:56:08.112 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 2.4747ms
+2024-12-23 12:56:10.466 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - null null
+2024-12-23 12:56:10.468 +05:30 [INF] Executing endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-12-23 12:56:10.469 +05:30 [INF] Route matched with {action = "Ingredients", controller = "Ingredients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Ingredients() on controller IngredientsController (LoginApp).
+2024-12-23 12:56:11.305 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Classification], [i].[Name], [i].[Source]
+FROM [Ingredients] AS [i]
+2024-12-23 12:56:11.349 +05:30 [INF] Executing ViewResult, running view /Views/Home/Ingredients.cshtml.
+2024-12-23 12:56:11.398 +05:30 [INF] Executed ViewResult - view /Views/Home/Ingredients.cshtml executed in 49.7834ms.
+2024-12-23 12:56:11.398 +05:30 [INF] Executed action IngredientsController.Ingredients (LoginApp) in 928.6854ms
+2024-12-23 12:56:11.398 +05:30 [INF] Executed endpoint 'IngredientsController.Ingredients (LoginApp)'
+2024-12-23 12:56:11.403 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/Ingredients/Ingredients - 200 null text/html; charset=utf-8 937.6267ms
+2024-12-23 12:56:11.426 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-23 12:56:11.426 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5019/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 0.4773ms
+2024-12-23 12:56:44.750 +05:30 [INF] Application is shutting down...

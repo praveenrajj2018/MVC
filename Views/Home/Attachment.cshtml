@@ -1,0 +1,201 @@
+@model LoginApp.ViewModels.AttachmentViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Attachment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ775eaSPhE8qDJE1TMfGAd47XFrn5eos1M" crossorigin="anonymous">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+
+        .modal-content {
+            padding: 20px;
+        }
+
+        .uploaded-image {
+            max-width: 100%;
+            height: auto;
+            max-height: 300px; /* Medium size */
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .info-table {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            .info-table th, .info-table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            .info-table th {
+                background-color: #f2f2f2;
+            }
+    </style>
+</head>
+<body>
+    <div class="container" style="margin-top: 120px;">
+        <h4 class="text-center mb-4" style="padding-right: 120px;">Attachments</h4>
+        <div class="text-center mb-4" style="margin-right: 920px;">
+            <button type="button" class="btn btn-success" onclick="openModal()" style="margin-left: 1120px;padding-left:50px;padding-right: 50px;">Add</button>
+        </div>
+
+        <!-- Modal -->
+        <div id="modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Upload Image</h5>
+                        <button type="button" class="close" aria-label="Close" onclick="closeModal()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form asp-action="UploadImage" asp-controller="Attachments" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="ImageFile">Choose Image:</label>
+                                <input type="file" class="form-control-file" asp-for="ImageFile" />
+                            </div><br />
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn btn-secondary mr-2" onclick="closeModal()">Cancel</button>
+                                <button type="submit" class="btn btn-success" style="margin-left: 5px;">Upload</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Display Modal -->
+        <div id="imageModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Image Preview</h5>
+                        <button type="button" class="close" aria-label="Close" onclick="closeImageModal()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="modalImage" src="" alt="Image Preview" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirmation Modal -->
+        <div id="confirmationModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Confirm Deletion</h5>
+                        <button type="button" class="close" aria-label="Close" onclick="closeConfirmationModal()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this attachment?</p>
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-danger mr-2" onclick="closeConfirmationModal()" style="padding-left:50px;padding-right:50px;margin-right:40px">No</button>
+                            <button type="button" class="btn btn-success" onclick="confirmDelete()" style="padding-left:50px;padding-right:50px;margin-right: 100px;">Yes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 text-center">
+                @if (Model.ImagePath != null)
+                {
+                    <img src="@Url.Content(Model.ImagePath)" alt="Uploaded Image" class="uploaded-image" onclick="showImageInfo('@Url.Content(Model.ImagePath)', '@Model.ImageFile.FileName', '@Model.ImageFile.ContentType', '@Model.ImageFile.Length', '@Model.UploadedBy', '@DateTime.Now')" />
+                }
+            </div>
+
+            <div class="col-md-6" id="image-info-container" style="display:none;">
+                <h5 class="mt-4">Attachment Information</h5>
+                <table class="info-table">
+                    <tbody id="image-info"></tbody>
+                </table>
+                <br />
+                <div class="d-flex justify-content-between">
+                    <form id="deleteForm" asp-action="DeleteImage" asp-controller="Attachments" method="post">
+                        <input type="hidden" name="id" value="@Model.Id" />
+                        <button type="button" class="btn btn-danger" onclick="openConfirmationModal()" style="padding-left:50px;padding-right: 50px;">Remove</button>
+                    </form>
+                    <button type="button" class="btn btn-primary" onclick="openImageModal()" style="padding-left:50px;padding-right: 50px;">Open</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function openModal() {
+            $('#modal').modal('show');
+        }
+
+        function closeModal() {
+            $('#modal').modal('hide');
+        }
+
+        function openImageModal() {
+            var imageUrl = '@Url.Content(Model.ImagePath)';
+            $('#modalImage').attr('src', imageUrl);
+            $('#imageModal').modal('show');
+        }
+
+        function closeImageModal() {
+            $('#imageModal').modal('hide');
+        }
+
+        function openConfirmationModal() {
+            $('#confirmationModal').modal('show');
+        }
+
+        function closeConfirmationModal() {
+            $('#confirmationModal').modal('hide');
+        }
+
+        function confirmDelete() {
+            document.getElementById('deleteForm').submit();
+        }
+
+        function showImageInfo(imageUrl, fileName, fileType, fileSize, uploadedBy, uploadDate) {
+            var infoTable = `
+                <tr>
+                    <th>File Name</th>
+                    <td>${fileName}</td>
+                </tr>
+                <tr>
+                    <th>File Type</th>
+                    <td>${fileType}</td>
+                </tr>
+                <tr>
+                    <th>File Size</th>
+                    <td>${(fileSize / 1024).toFixed(2)} KB</td>
+                </tr>
+                <tr>
+                    <th>Date Uploaded</th>
+                    <td>${new Date(uploadDate).toLocaleString()}</td>
+                </tr>
+
+            `;
+            $('#image-info').html(infoTable);
+            $('#image-info-container').show();
+        }
+    </script>
+</body>
+</html>

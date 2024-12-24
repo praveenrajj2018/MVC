@@ -4,70 +4,70 @@
     ViewData["Title"] = "Create Nutrient";
 }
 
-<h4 style="padding-top:120px">**************************** Nutrient Value **********************************</h4>
+
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh;margin-right:320px">
-    <form asp-controller="Create" asp-action="Create" method="post" style="width: 50%; display: flex; flex-direction: column; align-items: center;margin-bottom:80px;margin-left:320px">
+    <form asp-controller="Create" asp-action="Create" method="post" style="width: 50%; display: flex; flex-direction: column; align-items: center;margin-bottom:10px;margin-left:10px;border:2px solid black;border-radius: 20px; padding: 8px; box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1);"
+>
         @if (ViewBag.ErrorMessage != null)
         {
             <div class="alert alert-danger" role="alert">
                 @ViewBag.ErrorMessage
             </div>
         }
-
-
-        <div class="form-group" style="width: 100%;">
-            <label asp-for="BaseWeight" class="control-label"></label>
-            <input asp-for="BaseWeight" class="form-control" type="number" style="width: 450px;" placeholder="*N/A*" required data-val-required="Required field ***" />
+<h6 style="padding-left: 0px;">Nutrient Value/100g</h6>
+        <div class="form-group" style="width: 100%; display: flex; align-items: center;">
+            <label asp-for="BaseWeight" class="control-label" style="width: 30%;"></label>
+            <input asp-for="BaseWeight" class="form-control" type="number" style="width: 35%;" placeholder="*N/A*" required data-val-required="Required field ***" />
+            <input class="form-control read-only" type="number" style="width: 35%; margin-left: 10px;" readonly />
+            <p class="inline-text" style="margin-left: 10px;">g</p>
             <span asp-validation-for="BaseWeight" class="text-danger"></span>
         </div>
-        <div class="form-group" style="width: 100%;">
-            <label asp-for="Calories" class="control-label"></label>
-            <input asp-for="Calories" class="form-control" type="number" style="width: 100%;" required data-val-required="Required field ***" />
+
+        <div class="form-group" style="width: 100%; display: flex; align-items: center;">
+            <label asp-for="Calories" class="control-label" style="width: 30%;"></label>
+            <input asp-for="Calories" class="form-control" type="number" style="width: 35%;" required data-val-required="Required field ***" />
+            <input class="form-control read-only" type="number" style="width: 35%; margin-left: 10px;" readonly />
+            <p class="inline-text" style="margin-left: 10px;">g</p>
             <span asp-validation-for="Calories" class="text-danger"></span>
         </div>
 
-        <div class="form-group" style="width: 100%;">
-            <label asp-for="TotalFat" class="control-label"></label>
-            <div style="display: flex; align-items: center;">
-                <input asp-for="TotalFat" class="form-control" type="number" style="width: 100%;" required data-val-required="Required field ***" />
-                <p class="inline-text" style="margin-left: 10px;">g</p>
-            </div>
+        <div class="form-group" style="width: 100%; display: flex; align-items: center;">
+            <label asp-for="TotalFat" class="control-label" style="width: 30%;"></label>
+            <input asp-for="TotalFat" class="form-control" type="number" style="width: 35%;" required data-val-required="Required field ***" />
+            <input class="form-control read-only" type="number" style="width: 35%; margin-left: 10px;" readonly />
+            <p class="inline-text" style="margin-left: 10px;">g</p>
             <span asp-validation-for="TotalFat" class="text-danger"></span>
         </div>
 
-        <div class="form-group" style="width: 100%;">
-            <label asp-for="SaturatedFat" class="control-label"></label>
-            <div style="display: flex; align-items: center;">
-                <input asp-for="SaturatedFat" class="form-control" type="number" style="width: 100%;" required data-val-required="Required field ***" />
-                <p class="inline-text" style="margin-left: 10px;">g</p>
-            </div>
+        <div class="form-group" style="width: 100%; display: flex; align-items: center;">
+            <label asp-for="SaturatedFat" class="control-label" style="width: 30%;"></label>
+            <input asp-for="SaturatedFat" class="form-control" type="number" style="width: 35%;" required data-val-required="Required field ***" />
+            <input class="form-control read-only" type="number" style="width: 35%; margin-left: 10px;" readonly />
+            <p class="inline-text" style="margin-left: 10px;">g</p>
             <span asp-validation-for="SaturatedFat" class="text-danger"></span>
         </div>
 
-        <div class="form-group" style="width: 100%;">
-            <label asp-for="Cholesterol" class="control-label"></label>
-            <div style="display: flex; align-items: center;">
-                <input asp-for="Cholesterol" class="form-control" type="number" style="width: 100%;" required data-val-required="Required field ***" />
-                <p class="inline-text" style="margin-left: 10px;">g</p>
-            </div>
+        <div class="form-group" style="width: 100%; display: flex; align-items: center;">
+            <label asp-for="Cholesterol" class="control-label" style="width: 30%;"></label>
+            <input asp-for="Cholesterol" class="form-control" type="number" style="width: 35%;" required data-val-required="Required field ***" />
+            <input class="form-control read-only" type="number" style="width: 35%; margin-left: 10px;" readonly />
+            <p class="inline-text" style="margin-left: 10px;">g</p>
             <span asp-validation-for="Cholesterol" class="text-danger"></span>
         </div>
 
-        <div class="form-group" style="width: 100%;">
-            <label asp-for="Sodium" class="control-label"></label>
-            <div style="display: flex; align-items: center;">
-                <input asp-for="Sodium" class="form-control" type="number" style="width: 100%;" required data-val-required="Required field ***" />
-                <p class="inline-text" style="margin-left: 10px;">g</p>
-            </div>
+        <div class="form-group" style="width: 100%; display: flex; align-items: center;">
+            <label asp-for="Sodium" class="control-label" style="width: 30%;"></label>
+            <input asp-for="Sodium" class="form-control" type="number" style="width: 35%;" required data-val-required="Required field ***" />
+            <input class="form-control read-only" type="number" style="width: 35%; margin-left: 10px;" readonly />
+            <p class="inline-text" style="margin-left: 10px;">g</p>
             <span asp-validation-for="Sodium" class="text-danger"></span>
         </div>
 
-        <div class="form-group" style="width: 100%;">
-            <label asp-for="Carbohydrate" class="control-label"></label>
-            <div style="display: flex; align-items: center;">
-                <input asp-for="Carbohydrate" class="form-control" type="number" style="width: 100%;" required data-val-required="Required field ***" />
-                <p class="inline-text" style="margin-left: 10px;">g</p>
-            </div>
+        <div class="form-group" style="width: 100%; display: flex; align-items: center;">
+            <label asp-for="Carbohydrate" class="control-label" style="width: 30%;"></label>
+            <input asp-for="Carbohydrate" class="form-control" type="number" style="width: 35%;" required data-val-required="Required field ***" />
+            <input class="form-control read-only" type="number" style="width: 35%; margin-left: 10px;" readonly />
+            <p class="inline-text" style="margin-left: 10px;">g</p>
             <span asp-validation-for="Carbohydrate" class="text-danger"></span>
         </div>
 
@@ -77,7 +77,7 @@
             <a href="javascript:history.back()" class="btn btn-secondary" style="background-color:red">Cancel</a>
         </div>
     </form><br/>
-    <img src="https://cdn-gxx.dataweavers.io/-/media/heartland/school-solutions/meal-orders-laptop.jpg" width="790px" height="320px" style="margin-bottom:180px;padding-left:190px">
+    <img src="https://cdn-gxx.dataweavers.io/-/media/heartland/school-solutions/meal-orders-laptop.jpg" width="490px" height="320px" style="margin-top:120px;padding-left:120px;margin-left: 120px;">
 </div>
 
 @section Scripts {
@@ -87,10 +87,9 @@
             $('input[type="number"]').on('input', function() {
                 var value = $(this).val();
                 if (isNaN(value) || value.includes('e') || value.includes('-') || value.includes('+')) {
-                    $(this).next('span').text('Please enter a valid number');
-                    $(this).val('');
+                    $(this).next().next('.read-only').val('');
                 } else {
-                    $(this).next('span').text('');
+                    $(this).next().next('.read-only').val(value);
                 }
             });
         });

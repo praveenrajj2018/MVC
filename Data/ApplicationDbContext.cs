@@ -10,6 +10,8 @@ namespace LoginApp.Data
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<Nutrient> Nutrients { get; set; }
         public DbSet<Measurement> Measurements { get; set; }
+
+        public DbSet<Attachment> Attachments { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

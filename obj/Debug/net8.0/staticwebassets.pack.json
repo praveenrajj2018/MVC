@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\praveen.janarthanam\\Desktop\\MVC\\LoginApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LoginApp.bundle.scp.css",
-      "PackagePath": "staticwebassets\\LoginApp.bundle.scp.css"
+      "PackagePath": "staticwebassets\\LoginApp.2oj33kr1ow.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\praveen.janarthanam\\Desktop\\MVC\\LoginApp\\wwwroot\\css\\index.css",
@@ -35,6 +35,18 @@
     {
       "Id": "C:\\Users\\praveen.janarthanam\\Desktop\\MVC\\LoginApp\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\praveen.janarthanam\\Desktop\\MVC\\LoginApp\\wwwroot\\js\\__tests__\\Index.test.js",
+      "PackagePath": "staticwebassets\\js\\__tests__\\Index.test.js"
+    },
+    {
+      "Id": "C:\\Users\\praveen.janarthanam\\Desktop\\MVC\\LoginApp\\wwwroot\\js\\__tests__\\Ingredient.test.js",
+      "PackagePath": "staticwebassets\\js\\__tests__\\Ingredient.test.js"
+    },
+    {
+      "Id": "C:\\Users\\praveen.janarthanam\\Desktop\\MVC\\LoginApp\\wwwroot\\js\\__tests__\\Measurement.test.js",
+      "PackagePath": "staticwebassets\\js\\__tests__\\Measurement.test.js"
     },
     {
       "Id": "C:\\Users\\praveen.janarthanam\\Desktop\\MVC\\LoginApp\\wwwroot\\js\\index.js",
@@ -295,6 +307,34 @@
     {
       "Id": "C:\\Users\\praveen.janarthanam\\Desktop\\MVC\\LoginApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\praveen.janarthanam\\Desktop\\MVC\\LoginApp\\wwwroot\\uploads\\Annotation 2024-11-05 154536.png",
+      "PackagePath": "staticwebassets\\uploads\\Annotation 2024-11-05 154536.png"
+    },
+    {
+      "Id": "C:\\Users\\praveen.janarthanam\\Desktop\\MVC\\LoginApp\\wwwroot\\uploads\\burger-with-melted-cheese.webp",
+      "PackagePath": "staticwebassets\\uploads\\burger-with-melted-cheese.webp"
+    },
+    {
+      "Id": "C:\\Users\\praveen.janarthanam\\Desktop\\MVC\\LoginApp\\wwwroot\\uploads\\images.jfif",
+      "PackagePath": "staticwebassets\\uploads\\images.jfif"
+    },
+    {
+      "Id": "C:\\Users\\praveen.janarthanam\\Desktop\\MVC\\LoginApp\\wwwroot\\uploads\\orange-juice-17172744.webp",
+      "PackagePath": "staticwebassets\\uploads\\orange-juice-17172744.webp"
+    },
+    {
+      "Id": "C:\\Users\\praveen.janarthanam\\Desktop\\MVC\\LoginApp\\wwwroot\\uploads\\pexels-brunoscramgnon-1337825.jpg",
+      "PackagePath": "staticwebassets\\uploads\\pexels-brunoscramgnon-1337825.jpg"
+    },
+    {
+      "Id": "C:\\Users\\praveen.janarthanam\\Desktop\\MVC\\LoginApp\\wwwroot\\uploads\\product-jpeg-500x500.webp",
+      "PackagePath": "staticwebassets\\uploads\\product-jpeg-500x500.webp"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LoginApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LoginApp.Microsoft.AspNetCore.StaticWebAssets.props",

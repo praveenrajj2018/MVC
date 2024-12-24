@@ -28,13 +28,6 @@
     <title>@ViewData["Title"] - LoginApp</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/updateingredient.css" asp-append-version="true" />
-
-    <!-- Kendo UI stylesheets -->
-    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2024.1.119/styles/kendo.default-v2.min.css" />
-    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2024.1.119/styles/kendo.common.min.css" />
-    <!-- Kendo UI scripts -->
-    <script src="https://kendo.cdn.telerik.com/2024.1.119/js/jquery.min.js"></script>
-    <script src="https://kendo.cdn.telerik.com/2024.1.119/js/kendo.all.min.js"></script>
 </head>
 <body>
     <div class="containers mt-6" style='margin-right:300px;width:920px'>
@@ -42,11 +35,11 @@
             <h2>General</h2>
             <a href="@Url.Action("Measurement", "Measurements")" class="btn btn-info">Measurement</a>
             <a href="@Url.Action("Create", "Create")" class="btn btn-warning">Nutrients</a>
-            <a href="" class="btn btn-success">Allegens</a>
+            <a href="" class="btn btn-success">Allergens</a>
             <a href="" class="btn btn-primary">Purchase info</a>
-            <a href="" class="btn btn-secondary">Attachments</a>
+            <a href="@Url.Action("Attachment", "Attachments")" class="btn btn-secondary">Attachments</a>
         </div>
-        <form asp-controller="Ingredients" asp-action="UpdateIngredient" method="post" class="centered-form" style="padding-left:30px,width:1120px">
+        <form id="update-form" asp-controller="Ingredients" asp-action="UpdateIngredient" method="post" class="centered-form" style="padding-left:30px;width:1120px">
             <div class="form-group">
                 <label for="name">Ingredient # or Description</label>
                 <input type="hidden" name="Id" value="@Model.Id" /> <!-- Hidden field for Id -->
@@ -58,70 +51,99 @@
             </div>
             <div class="form-group">
                 <label for="classification">Classification</label>
-                @Html.DropDownListFor(model => model.Classification, new SelectList(classifications, "Value", "Text", Model.Classification), new { @class = "form-control dropdown-arrow", id = "classification" })
+                <div class="d-flex">
+                    @Html.DropDownListFor(model => model.Classification, new SelectList(classifications, "Value", "Text", Model.Classification), new { @class = "form-control dropdown-arrow", id = "classification", style = "flex:1;" })
+                    <button type="button" class="btn btn-outline-primary ml-2" id="add-classification" data-toggle="modal" data-target="#classificationModal" style="margin-left: 4px;">+</button>
+                </div>
             </div><br/>
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="button" class="btn btn-primary" id="update-btn">Update</button>
         </form>
     </div>
 
     <div id="grid"></div>
 
+    <!-- Confirmation Modal -->
+    <div id="updateConfirmationModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="updateConfirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateConfirmationModalLabel">Confirm Update</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to update this ingredient?</p>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-danger mr-2" data-dismiss="modal" style="padding-left:50px;padding-right:50px;margin-right:40px">No</button>
+                        <button type="button" class="btn btn-warning" id="confirmUpdateBtn" style="padding-left:50px;padding-right:50px;margin-right: 100px;">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Classification -->
+    <div class="modal fade" id="classificationModal" tabindex="-1" role="dialog" aria-labelledby="classificationModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="classificationModalLabel">New Classification</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="classification-form">
+                        <div class="form-group">
+                            <label for="new-classification">Description</label>
+                            <input type="text" class="form-control" id="new-classification" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="save-classification">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <img src="https://cdn-gxx.dataweavers.io/-/media/heartland/school-solutions/hss-footer.png?modified=20190820232021" width="1130px" style="margin-top:100px">
 
-    <!-- Kendo UI scripts -->
-    <script src="https://kendo.cdn.telerik.com/2024.1.119/js/jquery.min.js"></script>
-    <script src="https://kendo.cdn.telerik.com/2024.1.119/js/kendo.all.min.js"></script>
-    <script src="~/js/updateingredient.js" asp-append-version="true"></script>
+    <!-- Bootstrap and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script>
         $(document).ready(function () {
-            // Initialize Kendo Grid
-            $("#grid").kendoGrid({
-                dataSource: {
-                    transport: {
-                        read: {
-                            url: "@Url.Action("GetIngredients", "Ingredients")",
-                            dataType: "json"
-                        }
-                    },
-                    schema: {
-                        model: {
-                            fields: {
-                                name: { type: "string" },
-                                source: { type: "string" },
-                                classification: { type: "string" }
-                            }
-                        }
-                    },
-                    pageSize: 20
-                },
-                height: 550,
-                sortable: true,
-                pageable: {
-                    refresh: true,
-                    pageSizes: true,
-                    buttonCount: 5
-                },
-                columns: [
-                    { field: "name", title: "Name" },
-                    { field: "source", title: "Source" },
-                    { field: "classification", title: "Classification" }
-                ]
+            // Save classification
+            $("#save-classification").click(function() {
+                var newClassification = $("#new-classification").val();
+                if (newClassification) {
+                    // Add new classification to the dropdown list
+                    $("#classification").append(new Option(newClassification, newClassification));
+                    // Select the new classification
+                    $("#classification").val(newClassification);
+                    // Clear the input field in the modal
+                    $("#new-classification").val('');
+                    // Hide the modal
+                    $("#classificationModal").modal('hide');
+                }
             });
 
-            // Initialize Kendo DropDownList for Source
-            $("#source").kendoDropDownList({
-                dataTextField: "Text",
-                dataValueField: "Value",
-                dataSource: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(sources)),
-                value: "@Model.Source"
+            // Ensure modal is properly hidden when the cancel button is clicked
+            $(".btn[data-dismiss='modal']").click(function() {
+                $(this).closest('.modal').modal('hide');
             });
 
-            // Initialize Kendo DropDownList for Classification
-            $("#classification").kendoDropDownList({
-                dataTextField: "Text",
-                dataValueField: "Value",
-                dataSource: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(classifications)),
-                value: "@Model.Classification"
+            // Open confirmation modal for update
+            $("#update-btn").click(function() {
+                $('#updateConfirmationModal').modal('show');
+            });
+
+            // Confirm update action
+            $("#confirmUpdateBtn").click(function() {
+                $("#update-form").submit();
             });
         });
     </script>
